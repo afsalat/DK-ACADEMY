@@ -96,7 +96,7 @@ body{
     text-align: center;
 }
 
-.head .sect3 .s-btn1,.s-btn2{
+.head .sect3 a .s-btn1,.s-btn2{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -109,11 +109,12 @@ body{
     border-radius: 4px;
     transition: 1s;
     font-size: 15px;
+    text-decoration: none;
 }
 
 
 
-.head .sect3 .s-btn1:hover{
+.head .sect3 a .s-btn1:hover{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -128,7 +129,7 @@ body{
     font-size: 15px;
 }
 
-.head .sect3 .s-btn2:hover{
+.head .sect3 a .s-btn2:hover{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -143,7 +144,7 @@ body{
     font-size: 15px;
 }
 
-.head .sect3 .s-btn1:active{
+.head .sect3 a .s-btn1:active{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -158,7 +159,7 @@ body{
     font-size: 17px;
 }
 
-.head .sect3 .s-btn2:active{
+.head .sect3 a .s-btn2:active{
     margin-top: 4%;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
