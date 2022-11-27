@@ -273,6 +273,36 @@
             top:18.5%; 
             left:24%;
         }
+        #Button1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            background: #6699FF;
+            border: none;
+            border-radius: 4px;
+            transition: 1s;
+        }
+        #Button1:hover{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            background: #6699FF;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 3px 3px 5px black;
+            transition: 1s;
+
+        }
+        #Button1:active{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            background: #6699FF;
+            box-shadow: 3px 3px 5px black inset;
+            border: none;
+            border-radius: 4px;
+            transition: 1s;
+        }
     </style>
 </head>
 <body>
