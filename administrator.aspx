@@ -38,11 +38,6 @@
             transition: 50ms;
             color: aliceblue;
         }
-        .style6
-        {
-            height: 27px;
-            width: 230px;
-        }
         .style7
         {
             width: 100%;
@@ -57,11 +52,6 @@
             transition: 50ms;
             color: aliceblue;
             
-        }
-        .style8
-        {
-            height: 23px;
-            width: 243px;
         }
         .style10
         {
@@ -158,23 +148,14 @@
         {
             width: 257px;
         }
-        .style19
-        {
-            height: 23px;
-            width: 257px;
-        }
         .style20
         {
             width: 230px;
         }
-        .style21
-        {
-            height: 23px;
-            width: 283px;
-        }
         .style22
         {
             width: 283px;
+            height: 23px;
         }
         .style23
         {
@@ -192,86 +173,6 @@
         .style26
         {
             background: #CC99FF; 
-        }
-        #style27
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 1;
-            background-color: red;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style28
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 2;
-            background-color: orange;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style29
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 3;
-            background-color: yellow;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style30
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 4;
-            background-color: violet;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style31
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 5;
-            background-color: burlywood;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style32
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 6;
-            background-color: forestgreen;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style33
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 7;
-            background-color: lightgreen;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
-        }
-        #style34
-        {
-            height: 585px;
-            position: absolute;
-            z-index: 8;
-            background-color: rebeccapurple;
-            width: 100%;
-            top:18.5%; 
-            left:24%;
         }
         #Button1{
             font-family: Arial, Helvetica, sans-serif;
@@ -303,10 +204,87 @@
             border-radius: 4px;
             transition: 1s;
         }
-    </style>
+        #Button2,#Button3,#Button4,#Button5,#Button6,#Button7,#Button8,#Button9,#Button10{
+            background: #5c4573;
+            color: white;
+            transition: 2s;
+        }
+        #Button2:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button3:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button4:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button5:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button6:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button7:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button8:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button9:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        #Button10:hover{
+            background: #CC99FF;
+            color: black;
+            transition: 50ms;
+            border: none;
+            font-size: 17px;
+            text-shadow: 2px 2px 3px whitesmoke;
+        }
+        </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" background="#CC99FF">
     <table class="style1" 
         style="border: thick solid ; font-family: Arial; font-weight: bold;">
         <tr>
@@ -353,140 +331,110 @@
                     style="border-style: solid; border-width: 1px; text-align: center;" 
                     align="center" onclick="profile()">
                     <tr>
-                        <td>
-                            &nbsp;</td>
+                        <td width="20%">
+                            <asp:Button ID="Button2" runat="server" Height="65px" Text="PROFILE" 
+                                Width="100%" Font-Bold="True" Font-Names="Arial Black" 
+                                onclick="Button2_Click" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td align="left">
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROFILE</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table style="border-style: solid; border-width: 1px;" 
                     class="style7">
                     <tr>
                         <td class="style18">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="style19">
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; EMP. DETAILS</span></td>
-                    </tr>
-                    <tr>
-                        <td class="style18">
-                            &nbsp;</td>
-                    </tr>
-                </table>
-                <table style="border-style: solid; border-width: 1px;" class="style10">
-                    <tr>
-                        <td class="style6">
+                            <asp:Button ID="Button3" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button3_Click" 
+                                Text="EMP.DETAILS" Width="100%" />
                         </td>
                     </tr>
+                    </table>
+                <table style="border-style: solid; border-width: 1px;" class="style10">
                     <tr>
-                        <td class="style20">
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EMP. STATUS</span></td>
+                        <td class="style20" width="20%">
+                            <asp:Button ID="Button4" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button4_Click" 
+                                Text="EMP.STATUS" Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td class="style20">
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table class="style11" style="border-style: solid; border-width: 1px;">
                     <tr>
-                        <td class="style21">
-                            </td>
-                    </tr>
-                    <tr>
                         <td class="style22">
-                            &nbsp;<span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STUDENT&#39;S LIST</span></td>
+                            <asp:Button ID="Button5" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button5_Click" 
+                                Text="STD.DETAILS" Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td class="style22">
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table class="style12" 
                     style="border-style: solid; border-width: 1px;">
                     <tr>
                         <td>
-                            &nbsp;</td>
+                            <asp:Button ID="Button6" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button6_Click" 
+                                Text="BRANCH REQUEST" Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NONE</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table class="style13" 
                     style="border-style: solid; border-width: 1px;">
                     <tr>
                         <td>
-                            &nbsp;</td>
+                            <asp:Button ID="Button7" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button7_Click" 
+                                Text="CREATE BRANCH" Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NONE</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table class="style15" 
                     style="border-style: solid; border-width: 1px;">
                     <tr>
                         <td class="style23">
-                            &nbsp;</td>
+                            <asp:Button ID="Button8" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button8_Click" Text="NONE" 
+                                Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td class="style8">
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NONE</span></td>
-                    </tr>
-                    <tr>
-                        <td class="style23">
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
                 <table class="style14" 
                     style="border-style: solid; border-width: 1px;">
                     <tr>
                         <td class="style24">
-                            &nbsp;</td>
+                            <asp:Button ID="Button9" runat="server" Font-Bold="True" 
+                                Font-Names="Arial Black" Height="65px" onclick="Button9_Click" Text="HELP" 
+                                Width="100%" />
+                        </td>
                     </tr>
-                    <tr>
-                        <td class="style24">
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; HELP</span></td>
-                    </tr>
-                    <tr>
-                        <td class="style24">
-                            &nbsp;</td>
-                    </tr>
-                </table>
+                    </table>
             </td>
-            <td class="style26" align="left" style="text-align: left">
+            <td class="style26" align="left" style="text-align: left" width="80%">
             
-                <div id="style27">
-                </div>
-                <div id="style28">
-                </div>
-                <div id="style29">
-                </div>
-                <div id="style30">
-                </div>
-                <div id="style31">
-                </div>
-                <div id="style32">
-                </div>
-                <div id="style33">
-                </div>
-                <div id="style34">
-                </div>
+                <asp:MultiView ID="MultiView1" runat="server">
+                    <asp:View ID="View1" runat="server">
+                        <span lang="en-in">L1</span>
+                    </asp:View>
+                    <asp:View ID="View2" runat="server">
+                        <span lang="en-in">L2</span>
+                    </asp:View>
+                    <asp:View ID="View3" runat="server">
+                        <span lang="en-in">L3</span>
+                    </asp:View>
+                    <asp:View ID="View4" runat="server">
+                        <span lang="en-in">L4</span>
+                    </asp:View>
+                    <asp:View ID="View5" runat="server">
+                        <span lang="en-in">L5</span>
+                    </asp:View>
+                    <asp:View ID="View6" runat="server">
+                        <span lang="en-in">L6</span>
+                    </asp:View>
+                    <asp:View ID="View7" runat="server">
+                        <span lang="en-in">L7</span>
+                    </asp:View>
+                    <asp:View ID="View8" runat="server">
+                        <span lang="en-in">L8</span>
+                    </asp:View>
+                </asp:MultiView>
              </td>
         </tr>
         <tr>
@@ -499,18 +447,5 @@
     </form>
 
 
-
-    <script>
-        function profile(){
-            document.getElementById('style27').style.zIndex="10"
-            document.getElementById('style28').style.zIndex="6"
-            document.getElementById('style29').style.zIndex="5"
-            document.getElementById('style30').style.zIndex="4"
-            document.getElementById('style31').style.zIndex="3"
-            document.getElementById('style32').style.zIndex="2"
-            document.getElementById('style33').style.zIndex="2"
-            document.getElementById('style34').style.zIndex="2"
-        }
-    </script>
     </body>
 </html>
