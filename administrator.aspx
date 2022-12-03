@@ -281,6 +281,9 @@
             font-size: 17px;
             text-shadow: 2px 2px 3px whitesmoke;
         }
+        #Image1{
+            border-radius: 50%;
+        }
         </style>
 </head>
 <body>
@@ -302,13 +305,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                            <asp:Image ID="Image1" runat="server" />
+                            <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><asp:Image 
+                                ID="Image1" runat="server" Height="50px" Width="50px" 
+                                ImageUrl="~/download.png" />
                         </td>
                         <td>
                             <span lang="en-in" 
-                                style="font-size: x-large; font-family: cursive; font-style: italic; font-weight: bold; text-align: center;">
-                            KD ACADEMY</span></td>
+                                
+                                style="font-size: xx-large; font-family: Tahoma; font-style: normal; font-weight: bold; text-align: center;">
+                            KD ACADEMY<br />
+                            </span><span lang="en-in" 
+                                style="font-family: Calibri; font-size: small; font-weight: lighter;">- KD 
+                            group of institution -</span></td>
                         <td align="right">
                             <input id="Button1" type="button" value="Logout" /><span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
@@ -341,7 +349,7 @@
                 <table style="border-style: solid; border-width: 1px;" 
                     class="style7">
                     <tr>
-                        <td class="style18">
+                        <td class="style18" style="background-color: #5C4573">
                             <asp:Button ID="Button3" runat="server" Font-Bold="True" 
                                 Font-Names="Arial Black" Height="65px" onclick="Button3_Click" 
                                 Text="EMP.DETAILS" Width="100%" />
