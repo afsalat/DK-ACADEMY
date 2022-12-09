@@ -8,9 +8,12 @@ body{
 .head{
     width: 100%;
     height: 4.5rem;
-    background: rgba(95, 158, 160, 0.705);
+    background: rgb(95, 158, 160);
     border: 1px solid black;
-    overflow: hidden;
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 2;
 }
 
 .head .sect1{
@@ -85,7 +88,6 @@ body{
     text-shadow: 2px 3px 3px black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: 400ms;
-    
 }
 
 .head .sect3{
@@ -184,7 +186,8 @@ body{
     height: 40rem;
     float: left;
     display: block;
-    
+    padding-top: 55px;
+    background: linear-gradient(rgba(95, 158, 160, 0.19),rgba(95, 158, 160, 0.19));
 }
 
 .about .left{
@@ -198,7 +201,7 @@ body{
 .about .left .bg{
     width: 50%;
     height: 70%;
-    background-image: url('http://designient.com/wp-content/uploads/2022/06/Designient-Home-page-Banner.png');
+    background-image: linear-gradient(rgba(95, 158, 160, 0.19),rgba(95, 158, 160, 0.19)),url('http://designient.com/wp-content/uploads/2022/06/Designient-Home-page-Banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,7 +217,8 @@ body{
 }
 
 .about .right .para{
-    margin: 20px;
+    margin-left: 20px;
+    margin-top: 80px;
     width: 90%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
@@ -284,7 +288,7 @@ body{
 /* select choice section started     git(scs) */
 
 .sele{
-    background: rgba(95, 158, 160, 0.705);
+    background: rgba(95, 158, 160, 0.931);
     width: 100%;
     height: 80vh;
     float: left;
