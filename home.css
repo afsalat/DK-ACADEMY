@@ -183,10 +183,6 @@ body{
     width: 100%;
     height: 40rem;
     float: left;
-    background-image: linear-gradient(rgba(124, 195, 197, 0.342),rgba(150, 209, 211, 0.281)),url('https://img.freepik.com/free-photo/front-view-male-student-dark-t-shirt-yellow-backpack-holding-files-books-smiling-light-blue-wall_140725-46715.jpg?w=2000');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: block;
     
 }
@@ -195,40 +191,48 @@ body{
     width: 50%;
     height: 38rem;
     float: left;
-    /* border: 2px solid black; */
+    align-items: center;
+    position: relative;
+}
+
+.about .left .bg{
+    width: 50%;
+    height: 70%;
+    background-image: url('http://designient.com/wp-content/uploads/2022/06/Designient-Home-page-Banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    margin: auto;
+    margin-top: 15%;
 }
 
 .about .right{
     width: 50%;
     height: 38rem;
     float: left;
-    /* border:2px solid black; */
 }
 
-.about .left .para{
-    /* border: 2px solid black; */
+.about .right .para{
     margin: 20px;
     width: 90%;
-    font-family:fantasy;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     font-weight: bold;
     text-shadow: 3px 3px 5px cadetblue;
     word-wrap: break-word;
 }
 
+.about .right .para p{
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: none;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 .button_container {
 	position: absolute;
-}
-
-.description, .link {
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
-}
-
-.description {
-	font-size: 35px;
 }
 
 .btn {
@@ -271,17 +275,7 @@ body{
 
 .btn:hover:after {
   -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-  transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
-
-.link {
-  font-size: 20px;
-  margin-top: 30px;
-}
-
-.link a {
-  color: #000;
-  font-size: 25px; 
+  transform: translateX(-9%) translateY(-35%) rotate(45deg);
 }
 
 
@@ -290,7 +284,7 @@ body{
 /* select choice section started     git(scs) */
 
 .sele{
-    background: #56decc;
+    background: rgba(95, 158, 160, 0.705);
     width: 100%;
     height: 80vh;
     float: left;
@@ -307,6 +301,7 @@ body{
     display: block;
     border-radius: 10px;
     transition: 1s;
+    border: 1px solid rgba(71, 120, 122, 0.705);
 
 }
 
@@ -332,6 +327,7 @@ body{
     display: block;
     border-radius: 10px;
     transition: 1s;
+    border: 1px solid rgba(71, 120, 122, 0.705);
 
 }
 
@@ -357,7 +353,7 @@ body{
     display: block;
     border-radius: 10px;
     transition: 1s;
-
+    border: 1px solid rgba(71, 120, 122, 0.705);
 }
 
 .sele .box3:hover{
@@ -427,8 +423,8 @@ body{
 
 .sele .box3 .sub1{
     width: 100%;
-    height: 60%;
-    background-image:  url('al.png');
+    height: 70%;
+    background-image:  url('https://thumbs.dreamstime.com/b/handshake-robot-human-ai-technology-work-together-vector-illustration-human-hold-future-cyborg-machine-hand-handshake-195758753.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -443,6 +439,12 @@ body{
     text-shadow: 2px 1px 1px orange;
     font-weight: bold;
     font-family:cursive;
+}
+
+.sele .box3 .sub2 p{
+    color: rgb(115, 70, 140);
+    text-shadow: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* select choice section started     git(scs) */
