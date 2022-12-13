@@ -6,24 +6,29 @@ body{
 /* Nav-bar/header section started      git(nhs)*/
 
 .head{
-    width: 100%;
-    height: 4.5rem;
+    /* width: 100%; */
+    min-height: 4.5rem;
     background: rgb(95, 158, 160);
     border: 1px solid black;
     position: fixed;
     display: block;
-    top: 0;
+    float: right;
     z-index: 2;
 }
 
-.head .sect1{
+.head .sub-head{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.head .sub-head .sect1{
     float: left;
     height: 4.5rem;
-    width: 33%;
+    /* width: 100%; */
     text-align: center;
 }
 
-.head .sect1 h3{
+.head .sub-head .sect1 h3{
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: bisque;
@@ -32,14 +37,18 @@ body{
     font-size: 25px;
 }
 
-.head .sect2{
+.head .sub-head .sect2{
     float: left;
     height: 4.5rem;
-    width: 33%;
+    /* width: 100%; */
     text-align: center;
 }
 
-.head .sect2 p .s1,.s2,.s3{
+.head .sub-head .sect2 p{
+    margin-top: 5%;
+}
+
+.head .sub-head .sect2 p .s1,.s2,.s3{
     justify-content: space-around;
     word-spacing: 3rem;
     margin-top: 5%;
@@ -52,7 +61,7 @@ body{
 
 }
 
-.head .sect2 p .s1:hover{
+.head .sub-head .sect2 p .s1:hover{
     justify-content: space-around;
     word-spacing: 3rem;
     margin-top: 5%;
@@ -65,7 +74,7 @@ body{
     
 }
 
-.head .sect2 p .s2:hover{
+.head .sub-head .sect2 p .s2:hover{
     justify-content: space-around;
     word-spacing: 3rem;
     margin-top: 5%;
@@ -78,7 +87,7 @@ body{
     
 }
 
-.head .sect2 p .s3:hover{
+.head .sub-head .sect2 p .s3:hover{
     justify-content: space-around;
     word-spacing: 3rem;
     margin-top: 5%;
@@ -90,15 +99,15 @@ body{
     transition: 400ms;
 }
 
-.head .sect3{
+.head .sub-head .sect3{
     height: 4.5rem;
-    float: left;
+    float: right;
     word-spacing: 20px;
-    width: 33%;
+    width: 100%;
     text-align: center;
 }
 
-.head .sect3 a .s-btn1,.s-btn2{
+.head .sub-head .sect3 a .s-btn1,.s-btn2{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -116,7 +125,7 @@ body{
 
 
 
-.head .sect3 a .s-btn1:hover{
+.head .sub-head .sect3 a .s-btn1:hover{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -131,7 +140,7 @@ body{
     font-size: 15px;
 }
 
-.head .sect3 a .s-btn2:hover{
+.head .sub-head .sect3 a .s-btn2:hover{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -146,7 +155,7 @@ body{
     font-size: 15px;
 }
 
-.head .sect3 a .s-btn1:active{
+.head .sub-head .sect3 a .s-btn1:active{
     margin-top: 4%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -161,7 +170,7 @@ body{
     font-size: 17px;
 }
 
-.head .sect3 a .s-btn2:active{
+.head .sub-head .sect3 a .s-btn2:active{
     margin-top: 4%;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -181,42 +190,40 @@ body{
 
 /* company about section started     git(cas) */
 
-.about{
+.about {
     width: 100%;
-    height: 40rem;
+    min-height: 40rem;
     float: left;
     display: block;
-    padding-top: 55px;
+    padding-top: 200px;
     background: linear-gradient(rgba(95, 158, 160, 0.19),rgba(95, 158, 160, 0.19));
 }
 
-.about .left{
-    width: 50%;
-    height: 38rem;
+.about .sub-about .left{
+    min-height: 38rem;
     float: left;
-    align-items: center;
-    position: relative;
+    display: block;
 }
 
-.about .left .bg{
+.about .sub-about .left .bg{
     width: 50%;
     height: 70%;
     background-image: linear-gradient(rgba(95, 158, 160, 0.19),rgba(95, 158, 160, 0.19)),url('http://designient.com/wp-content/uploads/2022/06/Designient-Home-page-Banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    display: block;
     margin: auto;
     margin-top: 15%;
 }
 
-.about .right{
-    width: 50%;
-    height: 38rem;
+.about .sub-about .right{
+    max-height: 38rem;
     float: left;
+    display: block;
 }
 
-.about .right .para{
+.about .sub-about .right .para{
     margin-left: 20px;
     margin-top: 80px;
     width: 90%;
@@ -224,19 +231,21 @@ body{
     font-size: 25px;
     font-weight: bold;
     text-shadow: 3px 3px 5px cadetblue;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
 }
 
-.about .right .para p{
+.about .sub-about .right .para p{
     font-weight: lighter;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: none;
+    word-wrap: break-word;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
-.button_container {
+.button_contai {
 	position: absolute;
+    display: block;
 }
 
 .btn {
@@ -290,13 +299,28 @@ body{
 .sele{
     background: rgba(95, 158, 160, 0.931);
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     float: left;
-    justify-content: space-around;
-    display: flex;
 }
 
-.sele .box1{
+.sele .sub-sele{
+    width: 100%;
+    min-height: 80vh;
+    justify-content:space-around;
+    align-items:center;
+    display: block;
+   
+} 
+
+.sele .sub-sele .box1,.box2,.box3{
+    height: 100%;
+    float: left;
+    display: block;
+    align-items:center;
+
+}
+
+.sele .sub-sele .box1 .sub-box1{
     background: #f5fffe;
     width: 50vh;
     height: 60vh;
@@ -309,7 +333,7 @@ body{
 
 }
 
-.sele .box1:hover{
+.sele .sub-sele .box1 .sub-box1:hover{
     background: #f5fffe;
     box-shadow: 3px 3px 10px black;
     width: 50vh;
@@ -322,7 +346,7 @@ body{
 
 }
 
-.sele .box2{
+.sele .sub-sele .box2 .sub-box2{
     background: #f5fffe;
     width: 50vh;
     height: 60vh;
@@ -335,7 +359,7 @@ body{
 
 }
 
-.sele .box2:hover{
+.sele .sub-sele .box2 .sub-box2:hover{
     background: #f5fffe;
     box-shadow: 3px 3px 10px black;
     width: 50vh;
@@ -348,7 +372,7 @@ body{
 
 }
 
-.sele .box3{
+.sele .sub-sele .box3 .sub-box3{
     background: #f5fffe;
     width: 50vh;
     height: 60vh;
@@ -360,7 +384,7 @@ body{
     border: 1px solid rgba(71, 120, 122, 0.705);
 }
 
-.sele .box3:hover{
+.sele .sub-sele .box3 .sub-box3:hover{
     background: #f5fffe;
     box-shadow: 3px 3px 10px black;
     width: 50vh;
@@ -372,7 +396,7 @@ body{
     transition: 1s;
 }
 
-.sele .box1 .sub1{
+.sele .sub-sele .box1 .sub-box1 .sub1{
     width: 100%;
     height: 70%;
     background-image: url('https://www.magnitia.com/assets/images/sdet%20course2.jpg');
@@ -384,7 +408,7 @@ body{
     border-top-left-radius: 10px;
 }
 
-.sele .box1 .sub2{
+.sele .sub-sele .box1 .sub-box1 .sub2{
     text-align: center;
     color: rgb(174, 89, 198);
     text-shadow: 2px 1px 1px orange;
@@ -392,13 +416,13 @@ body{
     font-family:cursive;
 }
 
-.sele .box1 .sub2 p{
+.sele .sub-sele .box1 .sub-box1 .sub2 p{
     color: rgb(115, 70, 140);
     text-shadow: none;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.sele .box2 .sub1{
+.sele .sub-sele .box2 .sub-box2 .sub1{
     width: 100%;
     height: 70%;
     background: url('https://png.pngtree.com/png-vector/20200312/ourlarge/pngtree-modern-flat-design-concept-of-programmers-at-work-concept-software-development-png-image_2157879.jpg');
@@ -410,7 +434,7 @@ body{
     border-top-left-radius: 10px;
 }
 
-.sele .box2 .sub2{
+.sele .sub-sele .box2 .sub-box2 .sub2{
     text-align: center;
     color: rgb(174, 89, 198);
     text-shadow: 2px 1px 1px orange;
@@ -418,14 +442,14 @@ body{
     font-family:cursive;
 }
 
-.sele .box2 .sub2 p{
+.sele .sub-sele .box2 .sub-box2 .sub2 p{
     color: rgb(115, 70, 140);
     text-shadow: none;
     text-decoration: none;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.sele .box3 .sub1{
+.sele .sub-sele .box3 .sub-box3 .sub1{
     width: 100%;
     height: 70%;
     background-image:  url('https://thumbs.dreamstime.com/b/handshake-robot-human-ai-technology-work-together-vector-illustration-human-hold-future-cyborg-machine-hand-handshake-195758753.jpg');
@@ -437,7 +461,7 @@ body{
     border-top-left-radius: 10px;
 }
 
-.sele .box3 .sub2{
+.sele .sub-sele .box3 .sub-box3 .sub2{
     text-align: center;
     color: rgb(174, 89, 198);
     text-shadow: 2px 1px 1px orange;
@@ -445,7 +469,7 @@ body{
     font-family:cursive;
 }
 
-.sele .box3 .sub2 p{
+.sele .sub-sele .box3 .sub-box3 .sub2 p{
     color: rgb(115, 70, 140);
     text-shadow: none;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
