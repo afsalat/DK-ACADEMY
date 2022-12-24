@@ -214,8 +214,9 @@
                 <table class="style16">
                     <tr>
                         <td align="left" style="text-align: right">
-                            <a href="./home.html"><asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
-                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF">Back &gt;</asp:LinkButton></a>
+                            <asp:HyperLink ID="LinkButton1" runat="server" Font-Bold="True" 
+                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF" 
+                                NavigateUrl="~/home.html">Back &gt;</asp:HyperLink>
                             <span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                             <br />
                             <br />
