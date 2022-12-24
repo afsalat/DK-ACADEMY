@@ -93,10 +93,17 @@
         {
             height: 283px;
         }
+        #DropDownList1
+        {
+        	border-radius: 4px;	
+        	outline:none;
+        	border:none;
+        }
         </style>
 </head>
 <body>
-    <form id="form1" runat="server" style="background-color: #F6F6F6">
+    <form id="form1" runat="server" 
+    style="background-color: #F6F6F6; font-family: Arial;">
     <table bgcolor="#F6F6F6" class="style1">
         <tr>
             <td class="style5">
@@ -139,7 +146,7 @@
                         <td class="style6" align="left" style="text-align: left">
                             <br />
                             <asp:TextBox ID="TextBox2" runat="server" Width="190px" TextMode="Password" 
-                                Height="25px" BackColor="#DCEEF0" pl></asp:TextBox>
+                                Height="25px" BackColor="#DCEEF0" ></asp:TextBox>
                             <span lang="en-in">
                             <br />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
@@ -148,6 +155,23 @@
                                 Font-Size="Small">*Please enter valid password</asp:RegularExpressionValidator>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="text-align: center" colspan="2">
+                            <span lang="en-in" 
+                                style="font-family: Arial; font-weight: bold; text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am a </span>
+                            <asp:DropDownList ID="DropDownList1" runat="server" Font-Bold="True" 
+                                Font-Italic="False" Font-Names="Arial" BackColor="#B4E1E6">
+                                <asp:ListItem></asp:ListItem>
+                                <asp:ListItem Value="1">Student</asp:ListItem>
+                                <asp:ListItem Value="2">User</asp:ListItem>
+                                <asp:ListItem>Admin</asp:ListItem>
+                            </asp:DropDownList>
+                            <span lang="en-us">&nbsp; </span>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                                ControlToValidate="DropDownList1" ErrorMessage="RequiredFieldValidator" 
+                                Font-Size="Small">* Please choose your option!</asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>
