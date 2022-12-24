@@ -166,7 +166,7 @@
                                 <asp:ListItem></asp:ListItem>
                                 <asp:ListItem Value="1">Student</asp:ListItem>
                                 <asp:ListItem Value="2">User</asp:ListItem>
-                                <asp:ListItem>Admin</asp:ListItem>
+                                <asp:ListItem Value="3">Admin</asp:ListItem>
                             </asp:DropDownList>
                             <span lang="en-us">&nbsp; </span>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
@@ -214,8 +214,8 @@
                 <table class="style16">
                     <tr>
                         <td align="left" style="text-align: right">
-                            <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
-                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF">Back &gt;</asp:LinkButton>
+                            <a href="./home.html"><asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
+                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF">Back &gt;</asp:LinkButton></a>
                             <span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                             <br />
                             <br />
