@@ -197,7 +197,8 @@
                     </tr>
                     <tr>
                         <td>
-                <asp:Button ID="Button1" runat="server" Text="Submit" Height="28px" Width="84px" CssClass="style13"/>
+                <asp:Button ID="Button1" runat="server" Text="Submit" Height="28px" Width="84px" 
+                                CssClass="style13" onclick="Button1_Click1"/>
                         </td>
                     </tr>
                     <tr>
