@@ -74,12 +74,88 @@
         {
             height: 47px;
         }
+        #infobox
+        {
+        	width: 400px;
+        	height: 300px;
+        	background-color:#2d5e5b;
+        	color:#8ababb;
+        	z-index:2;
+        	position:fixed;
+        	margin-left: 34%;
+        	margin-top:200px;
+        	margin-bottom: 40%;
+        	box-shadow: 100px 100px 100px 900px #5F9EA0;
+        	border-radius: 9px;
+        	overflow:hidden;
+        }
+        #subbox1
+        {
+        	height: 100px;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	font-family:Courier New CYR;
+        	font-size:18px;
+        	font-weight:bold;
+        	color:#103836;
+        	overflow:hidden;
+        	background: linear-gradient(rgb(65, 121, 124),rgb(82, 181, 185));
+        }
+        #subbox2
+        {
+        	height: 40px;
+        	font-family:Courier New CYR;
+        	font-size:18px;
+        	font-weight:bold;
+        	text-align:left;
+        	display:flex;
+        	justify-content:left;
+        	align-items:end;
+        }
+        #subbox3
+        {
+        	height: 100px;
+        	font-family:Courier New CYR;
+        	font-size:18px;
+        	font-weight:bold;
+        	text-align:left;
+        }
+        ul 
+        {
+        	width:250px;
+        	
+        }
+        #subbox4
+        {
+        	height: 40px;
+        	text-align:right;
+        }
+        a
+        {
+        	text-decoration:none;
+        	color:cadetblue;
+        	font-family:Cambria;
+        	font-weight:bold;
+        	font-size:18px;
+        	transition:2s;
+        }
+        a:hover
+        {
+        	text-shadow:2px 2px 4px black;
+        	transition:50ms;	
+        }
+        #addr
+        {
+        	display:flex;
+        	justify-content:end;
+        	aign-items:center;
     </style>
 </head>
-<body style="text-align: center; background-color: #5F9EA0;">
+<body id="main-b" style="text-align: center; background-color: #5F9EA0;">
     <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif;" 
     method="post">
-    <table class="style1" style="text-align: center; font-family: Arial;" 
+    <table id="style1" class="style1" style="text-align: center; font-family: Arial;" 
         align="center" frame="border">
         <tr>
             <td>
@@ -89,7 +165,7 @@
             <td class="style6">
                 <asp:HyperLink runat="server" 
                     style="font-weight: bold; font-family: 'Arial Black'" Font-Overline="False" 
-                    Font-Underline="False" ForeColor="Black" NavigateUrl="~/home.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    Font-Underline="False" ForeColor="#8f8f8f" NavigateUrl="~/home.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                 X<br />
                 <br />
                 </asp:HyperLink>
@@ -175,7 +251,7 @@
                             <span lang="en-in">&nbsp;</span></td>
                     </tr>
                     <tr>
-                        <td align="center">
+                        <td id="addr" align="center">
                 <asp:Label ID="Label8" runat="server" Text="Address "></asp:Label>
                 <asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine" Height="44px"  CssClass="style11"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
