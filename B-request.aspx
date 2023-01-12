@@ -145,11 +145,6 @@
         	text-shadow:2px 2px 4px black;
         	transition:50ms;	
         }
-        #addr
-        {
-        	display:flex;
-        	justify-content:end;
-        	aign-items:center;
     </style>
 </head>
 <body id="main-b" style="text-align: center; background-color: #5F9EA0;">
@@ -251,7 +246,7 @@
                             <span lang="en-in">&nbsp;</span></td>
                     </tr>
                     <tr>
-                        <td id="addr" align="center">
+                        <td align="center">
                 <asp:Label ID="Label8" runat="server" Text="Address "></asp:Label>
                 <asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine" Height="44px"  CssClass="style11"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
