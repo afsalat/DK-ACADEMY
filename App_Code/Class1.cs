@@ -16,7 +16,7 @@ public class Connection
     SqlConnection con;
 	public Connection()
 	{
-        con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+        con = new SqlConnection("Data Source=DESKTOP-OH9D4HM\\SQLEXPRESS;Initial Catalog=dk-academy;Integrated Security=True");
 	}
     public SqlConnection Connect()
     {
