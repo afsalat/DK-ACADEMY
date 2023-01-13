@@ -1,0 +1,85 @@
+body{
+    margin: 0%;
+}
+
+.back{
+    width: 100%;
+    height: 5vh;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+    background-color: rgba(95, 158, 160, 0.931);
+}
+
+.back a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(123, 213, 216);
+    background-color: rgb(47, 81, 83);
+    border-radius: 5px;
+}
+
+.back a:hover{
+    text-shadow: 6px 0px 10px black;
+    transition: 800ms;
+}
+
+.main-box{
+    width: 100%;
+    height: 95vh;
+    background-color: rgba(95, 158, 160, 0.931);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-box .sub-main-box1,.sub-main-box2{
+    width: 40vh;
+    height: 50vh;
+    border-radius: 6%;
+    background-color:rgb(187, 227, 227);
+    border: 1px solid rgb(70, 111, 113);
+    transition: 1s;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box1:hover{
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms;
+    border: none;
+}
+
+.main-box .sub-main-box2:hover{
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms;
+    border: none;
+}
+
+.main-box .sub-main-box1 .request{
+    width: 100%;
+    height: 100%;
+}
+
+.main-box .sub-main-box1 .request .request-box2{
+    text-align: center;
+    align-items: center;
+    font-family: cursive;
+    color: cadetblue;
+    text-shadow: 2px 0px 2px rgb(44, 75, 76);
+}
+
+.main-box .sub-main-box2 .status{
+    width: 100%;
+    height: 100%;
+}
+
+.main-box .sub-main-box2 .status .status-box2{
+    text-align: center;
+    align-items: center;
+    font-family: cursive;
+    color: cadetblue;
+    text-shadow: 2px 0px 2px rgb(41, 70, 71);
+}
