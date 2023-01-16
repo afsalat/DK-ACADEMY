@@ -18,13 +18,13 @@ public partial class b_details_forms : System.Web.UI.Page
     Connection con = new Connection();
     protected void Page_Load(object sender, EventArgs e)
     {
-       SqlConnection co = con.Connect();
+        Label1.Text = GridView1.NavigateUrl1 = ".aspx"
+        SqlConnection co = con.Connect();
         co.Open();
         cmd = new SqlCommand("select * from branch_request where ID='afs3615'", co);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
-        Label1.Text = dr["First_Name"].ToString();
         Label5.Text = dr["Gender"].ToString();
         Label7.Text = dr["Qualification"].ToString();
         Label9.Text = dr["Phone"].ToString();
