@@ -14,7 +14,7 @@
                                             <RowStyle BackColor="#6699FF" ForeColor="Black" BorderColor="#000066" 
                                                 BorderStyle="Solid" />
                                             <Columns>
-                                                <asp:HyperLinkField DataNavigateUrlFields="First_Name" 
+                                                <asp:HyperLinkField DataNavigateUrlFields="ID" 
                                                     DataNavigateUrlFormatString="b_details_forms.aspx?field={0}" HeaderText="View More Details" 
                                                     Text="View" />
                                             </Columns>

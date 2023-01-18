@@ -12,46 +12,38 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 
-public partial class b_details_forms : System.Web.UI.Page
+public partial class B_update : System.Web.UI.Page
 {
-
-    SqlCommand cmd ,cmd1;
+    SqlCommand cmd, cmd1;
     Connection co = new Connection();
     string id;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         id = Request["field"].ToString();
 
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from branch_request where ID='"+id+"'", con);
+        SqlCommand cmd = new SqlCommand("select * from usernameNpassword where Branch_ID='" + id + "'", con);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
-        Label1.Text = dr["First_Name"].ToString();
-        Label15.Text = dr["Last_Name"].ToString();
-        Label5.Text = dr["Gender"].ToString();
-        Label7.Text = dr["Qualification"].ToString();
-        Label9.Text = dr["Phone"].ToString();
-        Label11.Text = dr["Email"].ToString();
-        Label13.Text = dr["Address"].ToString();
+        TextBox1.Text = dr["Branch_ID"].ToString();
+        TextBox2.Text = dr["User_Name"].ToString();
+        TextBox3.Text = dr["Password"].ToString();
         con.Close();
-
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        SqlConnection con = co.Connect();
-        con.Open();
-        cmd1 = new SqlCommand("delete from branch_request where ID='" + id + "'", con);
-        cmd1.ExecuteNonQuery();
-        con.Dispose();
-        con.Close();
-        
-        Response.Redirect("branch_request.aspx");
-        
+        Response.Redirect("create_branch.aspx");
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("B-create.aspx");
+        SqlConnection con = co.Connect();
+        con.Open();
+        cmd1 = new SqlCommand("UPDATE usernameNpassword SET User_Name='" + TextBox2.Text.ToString() + "',Password='" + TextBox3.Text.ToString() + "' where Branch_ID='" + id + "'", con);
+        cmd1.ExecuteNonQuery();
+        Response.Redirect("create_branch.aspx");
+        con.Close();
     }
 }
