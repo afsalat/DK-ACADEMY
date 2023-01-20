@@ -24,7 +24,7 @@ public partial class b_details_forms : System.Web.UI.Page
 
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from branch_request where ID='"+id+"'", con);
+        cmd = new SqlCommand("select * from branch_request where ID='"+id+"'", con);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
@@ -36,6 +36,8 @@ public partial class b_details_forms : System.Web.UI.Page
         Label11.Text = dr["Email"].ToString();
         Label13.Text = dr["Address"].ToString();
         con.Close();
+
+        string pp = Label1.Text;
 
     }
     protected void Button2_Click(object sender, EventArgs e)
@@ -52,6 +54,6 @@ public partial class b_details_forms : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("B-create.aspx");
+        Response.Redirect("B-create.aspx?Parameter=" + id);
     }
 }

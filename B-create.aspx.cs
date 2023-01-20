@@ -19,24 +19,36 @@ public partial class create : System.Web.UI.Page
     SqlConnection con;
     SqlCommand cmd, id_code,first_name;
     Connection co = new Connection();
-    string bID;
+    string bID,xt,xb;
     protected void Page_Load(object sender, EventArgs e)
     {
+        bID = Request["parameter"].ToString();
+
         con = co.Connect();
         con.Open();
 
-        first_name = new SqlCommand("select First_Name from Branch_Request where ID='" + bID + "'", con);
+        first_name = new SqlCommand("select * from Branch_Request where ID='" + bID + "'", con);
 
         id_code = new SqlCommand("select count(*) from Branch_Request", con);
         double cons = Convert.ToDouble(id_code.ExecuteScalar());
         string code = Convert.ToString(cons) + 5 * 123;
 
-        string ftl = Convert.ToString(first_name);
 
-        string upperN = ftl.ToUpper();
+        SqlDataReader dr = first_name.ExecuteReader();
+        dr.Read();
+        xt = dr["First_Name"].ToString();
+        xb = dr["ID"].ToString();
+        dr.Close();
+        string ftl = Convert.ToString(xt);
+        string f3 = ftl.Substring(0, 3);
 
-        string id = upperN + code;
+        string upperN = f3.ToUpper();
 
+        TextBox3.Text = xb.ToString() +upperN + code;
+
+        TextBox1.Text = xt.ToLower() + xb;
+
+        TextBox2.Text = xb + xb + xt.Substring(0,3).ToLower();
 
     }
     protected void Button2_Click(object sender, EventArgs e)
@@ -47,5 +59,7 @@ public partial class create : System.Web.UI.Page
     {
         cmd = new SqlCommand("insert into usernameNpassword values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')", con);
         cmd.ExecuteNonQuery();
+
+        Response.Redirect("branch_request.aspx");
     }
 }

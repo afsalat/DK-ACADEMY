@@ -41,9 +41,9 @@ public partial class B_update : System.Web.UI.Page
     {
         SqlConnection con = co.Connect();
         con.Open();
-        cmd1 = new SqlCommand("UPDATE usernameNpassword SET User_Name='" + TextBox2.Text.ToString() + "',Password='" + TextBox3.Text.ToString() + "' where Branch_ID='" + id + "'", con);
+        SqlCommand cmd1 = new SqlCommand("update usernameNpassword set User_Name='" + TextBox2.Text + "',Password='" + TextBox3.Text + "' where Branch_ID='" + TextBox1.Text + "'", con);
         cmd1.ExecuteNonQuery();
+        con.Close();        
         Response.Redirect("create_branch.aspx");
-        con.Close();
     }
 }
