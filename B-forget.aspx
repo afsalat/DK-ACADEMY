@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="B-update.aspx.cs" Inherits="B_update" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="B-forget.aspx.cs" Inherits="B_update" %>
 
     <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -119,6 +119,29 @@
                 </div>
             </div>
         </form>
+
+        <script type="text/javascript">
+            const btn = document.getElementById('button');
+
+            document.getElementById('form')
+                .addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    btn.value = 'Sending...';
+
+                    const serviceID = 'service_wtzjzam';
+                    const templateID = 'template_3dvot6c';
+
+                    emailjs.sendForm(serviceID, templateID, this)
+                        .then(() => {
+                            btn.value = 'Send Email';
+                            alert('Sent!');
+                        }, (err) => {
+                            btn.value = 'Send Email';
+                            alert(JSON.stringify(err));
+                        });
+                });
+        </script>
     </body>
 
     </html>

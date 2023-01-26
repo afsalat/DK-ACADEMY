@@ -17,6 +17,7 @@ public partial class B_update : System.Web.UI.Page
     SqlCommand cmd, cmd1;
     Connection co = new Connection();
     string id;
+    DateTime currentDateTime = DateTime.Now;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,7 +25,7 @@ public partial class B_update : System.Web.UI.Page
 
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from usernameNpassword where Branch_ID='" + id + "'", con);
+        SqlCommand cmd = new SqlCommand("select * from usernameNpassword where Branch_Forget='" + id + "'", con);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
@@ -35,15 +36,16 @@ public partial class B_update : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("create_branch.aspx");
+        Response.Redirect("B-forget-requests.aspx");
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd1 = new SqlCommand("update usernameNpassword set User_Name='" + TextBox2.Text + "',Password='" + TextBox3.Text + "' where Branch_ID='" + TextBox1.Text + "'", con);
-        cmd1.ExecuteNonQuery();
+        cmd = new SqlCommand("UPDATE usernameNpassword SET Branch_Forget = 'SOLVED ON : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
+        cmd.ExecuteNonQuery();
+        con.Dispose();
         con.Close();        
-        Response.Redirect("create_branch.aspx");
+        Response.Redirect("B-forget-requests.aspx");
     }
 }

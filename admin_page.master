@@ -149,8 +149,8 @@
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
-                            <asp:Button ID="Button7" runat="server" Height="65px" Text="NONE" 
-                                Width="100%" PostBackUrl="~/none.aspx" BackColor="#0066FF" 
+                            <asp:Button ID="Button7" runat="server" Height="65px" Text="BRANCH FORGET REQUEST" 
+                                Width="100%" PostBackUrl="~/B-forget-requests.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
@@ -166,8 +166,11 @@
             <td align="left" class="style7" colspan="2" 
                 style="padding: 0px; margin: 0px; width: 80%">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    <p class="style10" align="left" dir="ltr" style="width: 80%">
-                        &nbsp;</p>
+                    <p class="style10" align="left" dir="ltr" style="width: 100%">
+                    <asp:Panel ID="Panel1" runat="server">
+                    </asp:Panel>
+                    </p>
+
                 </asp:ContentPlaceHolder>
             </td>
         </tr>

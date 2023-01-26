@@ -6,24 +6,24 @@
                         HorizontalAlign="Center" BackColor="#228FF2" 
     Width="100%">
                                       
-                                        <asp:GridView ID="GridView1" runat="server" BackColor="White" 
-                                            BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" 
-                                            CellSpacing="1" GridLines="None" HorizontalAlign="Center" 
+                                        <asp:GridView ID="GridView1" runat="server" CellPadding="4" GridLines="None" HorizontalAlign="Center" 
                                             onselectedindexchanged="GridView1_SelectedIndexChanged" Width="100%" 
-                                            Height="117px">
-                                            <RowStyle BackColor="#6699FF" ForeColor="Black" BorderColor="#000066" 
+                                            Height="117px" ForeColor="#333333">
+                                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" BorderColor="#000066" 
                                                 BorderStyle="Solid" />
                                             <Columns>
                                                 <asp:HyperLinkField DataNavigateUrlFields="ID" 
                                                     DataNavigateUrlFormatString="b_details_forms.aspx?field={0}" HeaderText="View More Details" 
                                                     Text="View" />
                                             </Columns>
-                                            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-                                            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Center" 
+                                            <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />
+                                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" 
                                                 VerticalAlign="Middle" />
-                                            <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-                                            <HeaderStyle BackColor="#0066CC" Font-Bold="True" ForeColor="#E7E7FF" 
+                                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" 
                                                 HorizontalAlign="Center" VerticalAlign="Middle" />
+                                            <EditRowStyle BackColor="#999999" />
+                                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                                         </asp:GridView>
                                     </asp:Panel>
                                

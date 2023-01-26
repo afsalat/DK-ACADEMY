@@ -57,7 +57,7 @@ public partial class create : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        cmd = new SqlCommand("insert into usernameNpassword values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')", con);
+        cmd = new SqlCommand("insert into usernameNpassword values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "',NULL)", con);
         cmd.ExecuteNonQuery();
 
         Response.Redirect("branch_request.aspx");
