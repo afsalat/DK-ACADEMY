@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 public partial class create : System.Web.UI.Page
 {
     SqlConnection con;
-    SqlCommand cmd, id_code,first_name;
+    SqlCommand cmd,cmd1, id_code,first_name;
     Connection co = new Connection();
     string bID,xt,xb;
     protected void Page_Load(object sender, EventArgs e)
@@ -58,6 +58,8 @@ public partial class create : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         cmd = new SqlCommand("insert into usernameNpassword values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "',NULL)", con);
+        cmd1 = new SqlCommand("UPDATE branch_request SET Branch_ID = '" + TextBox3.Text + "' WHERE ID='" + bID + "'", con);
+        cmd1.ExecuteNonQuery();
         cmd.ExecuteNonQuery();
 
         Response.Redirect("branch_request.aspx");

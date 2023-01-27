@@ -121,10 +121,9 @@
         </form>
 
         <script type="text/javascript">
-            const btn = document.getElementById('button');
+            const btn = document.getElementById('Button2');
 
-            document.getElementById('form')
-                .addEventListener('submit', function (event) {
+            document.getElementById('form').addEventListener('submit', function (event) {
                     event.preventDefault();
 
                     btn.value = 'Sending...';

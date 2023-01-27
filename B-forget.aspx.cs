@@ -16,12 +16,14 @@ public partial class B_update : System.Web.UI.Page
 {
     SqlCommand cmd, cmd1;
     Connection co = new Connection();
-    string id;
+    string id,id1,id2,email;
     DateTime currentDateTime = DateTime.Now;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         id = Request["field"].ToString();
+        id1 = id[0].ToString();
+        id2 = id[0].ToString();
 
         SqlConnection con = co.Connect();
         con.Open();
@@ -32,6 +34,14 @@ public partial class B_update : System.Web.UI.Page
         TextBox1.Text = dr["Branch_ID"].ToString();
         TextBox2.Text = dr["User_Name"].ToString();
         TextBox3.Text = dr["Password"].ToString();
+        dr.Close();
+
+        cmd1 = new SqlCommand("select Email from branch_request where Branch_ID='" + id + "'", con);
+        SqlDataReader dr1 = cmd1.ExecuteReader();
+        dr1.Read();
+        Label2.Text = dr1["Email"].ToString();
+        Response.Write(email);
+        dr1.Close();
         con.Close();
     }
     protected void Button2_Click(object sender, EventArgs e)
