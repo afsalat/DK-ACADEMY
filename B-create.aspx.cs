@@ -27,7 +27,7 @@ public partial class create : System.Web.UI.Page
         con = co.Connect();
         con.Open();
 
-        first_name = new SqlCommand("select * from Branch_Request where ID='" + bID + "'", con);
+        first_name = new SqlCommand("select * from active_branches where ID='" + bID + "'", con);
 
         id_code = new SqlCommand("select count(*) from Branch_Request", con);
         double cons = Convert.ToDouble(id_code.ExecuteScalar());
@@ -57,10 +57,13 @@ public partial class create : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        cmd = new SqlCommand("insert into usernameNpassword values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "',NULL)", con);
-        cmd1 = new SqlCommand("UPDATE branch_request SET Branch_ID = '" + TextBox3.Text + "' WHERE ID='" + bID + "'", con);
+        cmd1 = new SqlCommand("UPDATE active_branches SET Branch_ID = '" + TextBox3.Text + "',User_Name='" + TextBox1.Text + "',Password='" + TextBox2.Text + "' WHERE ID='" + bID + "'", con);
         cmd1.ExecuteNonQuery();
-        cmd.ExecuteNonQuery();
+
+        cmd1 = new SqlCommand("delete from branch_request where ID='" + bID + "'", con);
+        cmd1.ExecuteNonQuery();
+        con.Dispose();
+        con.Close();
 
         Response.Redirect("branch_request.aspx");
     }

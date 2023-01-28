@@ -2,7 +2,7 @@
 
     <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head runat="server">
@@ -75,11 +75,15 @@
                 width: 364px;
                 height: -12px;
             }
+            .style8
+            {
+                width: 171px;
+            }
         </style>
     </head>
 
     <body>
-        <form id="form1" runat="server">
+        <form id="form" runat="server">
             <div class="style1">
                 <div class="style2">
                     <div class="style3">
@@ -97,49 +101,62 @@
                         <br />
                         <asp:Label ID="Label2" runat="server" Text="User Name " Font-Bold="True" Font-Names="Arial">
                         </asp:Label>
-                        <asp:TextBox ID="TextBox2" runat="server" Height="26px" Width="167px" ReadOnly="True">
-                        </asp:TextBox>
-                        <br />
+                        <input runat="server" id="Text1" class="style8" type="text" /><br />
                         <br />
                         <asp:Label ID="Label3" runat="server" Text="Password " Font-Bold="True" Font-Names="Arial">
                         </asp:Label>
-                        <span lang="en-in">&nbsp; </span>
-                        <asp:TextBox ID="TextBox3" runat="server" Height="26px" Width="167px" ReadOnly="True">
-                        </asp:TextBox>
-                    </div>
+                        <span lang="en-in">&nbsp; 
+                        <input runat="server" id="Text2" class="style8" type="text" /></span></div>
                     <div class="style6">
-                        <asp:Button ID="Button1" runat="server" Text="Send" Height="32px" Width="78px"
+                        <asp:Button  ID="Button1" runat="server" Text="Send" Height="32px" Width="78px"
                             Font-Names="Bahnschrift SemiBold" onclick="Button1_Click" />
                         <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                         <asp:Button ID="Button2" runat="server" Text="Cancel" Height="32px" Width="78px"
                             Font-Names="Bahnschrift SemiBold" onclick="Button2_Click" />
-                    </div>
+                        <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Size="1px" Text="Label">
+                        </asp:Label>
+                        <input id="Submit" type="submit" value="submit" /></div>
 
                 </div>
             </div>
         </form>
 
         <script type="text/javascript">
-            const btn = document.getElementById('Button2');
+
+
+            var username = document.getElementById('TextBox2').value;
+            var password = document.getElementById('TextBox3').value;
+            var email = document.getElementById('Label4').value;
+            var Button1 = document.getElementById('Button1');
+            
+            alert(username,password,email);
+
 
             document.getElementById('form').addEventListener('submit', function (event) {
-                    event.preventDefault();
+                event.preventDefault();
 
-                    btn.value = 'Sending...';
+                const data = {
+                    email: email,
+                    username: username,
+                    password: password
+                }
 
-                    const serviceID = 'service_wtzjzam';
-                    const templateID = 'template_3dvot6c';
+                Button1.value = 'Sending...';
 
-                    emailjs.sendForm(serviceID, templateID, this)
-                        .then(() => {
-                            btn.value = 'Send Email';
-                            alert('Sent!');
-                        }, (err) => {
-                            btn.value = 'Send Email';
-                            alert(JSON.stringify(err));
-                        });
+                const serviceID = 'service_wtzjzam';
+                const templateID = 'template_3dvot6c';
+
+                emailjs.sendForm(serviceID, templateID, data).then(() => {
+                    Button1.value = 'Send Email';
+                    alert('Sent!');
+                }, (err) => {
+                    Button1.value = 'Send Email';
+                    alert(JSON.stringify(err));
                 });
+            });
+
+            emailjs.init('kLlity-icuDcH3wlT');
         </script>
     </body>
 

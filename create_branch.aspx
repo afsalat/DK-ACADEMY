@@ -11,8 +11,6 @@
                 ForeColor="#333333">
                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" BorderColor="#000066" BorderStyle="Solid" />
                 <Columns>
-                    <asp:BoundField DataField="User_Name" HeaderText="User_Name" SortExpression="User_Name" />
-                    <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
                     <asp:BoundField DataField="Branch_ID" HeaderText="Branch_ID" SortExpression="Branch_ID" />
                     <asp:HyperLinkField DataNavigateUrlFields="Branch_ID"
                         DataNavigateUrlFormatString="B-remove.aspx?field={0}" HeaderText="Branch Drop" Text="Remove" />
@@ -32,8 +30,8 @@
                 <input ID="Button10" type="button" value="CREATE" class="style15" />
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-                ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString5 %>"
-                SelectCommand="SELECT * FROM [usernameNpassword]"></asp:SqlDataSource>
+                ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString6 %>"
+                SelectCommand="SELECT [Branch_ID] FROM [active_branches]"></asp:SqlDataSource>
         </asp:Panel>
     </asp:Content>
 

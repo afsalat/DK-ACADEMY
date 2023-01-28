@@ -36,24 +36,26 @@ public partial class b_details_forms : System.Web.UI.Page
         Label11.Text = dr["Email"].ToString();
         Label13.Text = dr["Address"].ToString();
         con.Close();
-
         string pp = Label1.Text;
+
 
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        SqlConnection con = co.Connect();
-        con.Open();
-        cmd1 = new SqlCommand("delete from branch_request where ID='" + id + "'", con);
-        cmd1.ExecuteNonQuery();
-        con.Dispose();
-        con.Close();
+
         
         Response.Redirect("branch_request.aspx");
         
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        SqlConnection con = co.Connect();
+        con.Open();
+        cmd1 = new SqlCommand("INSERT INTO active_branches (First_Name,Last_Name,Qualification,Gender,Phone,Email_ID,Address,ID) VALUES('" + Label1.Text + "','" + Label15.Text + "','" + Label7.Text + "','" + Label5.Text + "','" + Label9.Text + "','" + Label11.Text + "','" + Label3.Text + "','" + id + "')", con);
+        cmd1.ExecuteNonQuery();
+
         Response.Redirect("B-create.aspx?Parameter=" + id);
+
+
     }
 }

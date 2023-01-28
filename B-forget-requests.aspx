@@ -7,37 +7,36 @@
             BorderColor="#5656A5">
             <asp:GridView ID="GridView1" runat="server" CellPadding="3" 
                 HorizontalAlign="Center" Width="100%"
-                AllowSorting="True" DataSourceID="uaernameNpassword" Height="100%" 
+                AllowSorting="True" Height="100%" 
                 AutoGenerateColumns="False" ShowFooter="True" Font-Bold="True" 
                 Font-Names="Bahnschrift SemiLight SemiConde" BackColor="White" 
-                BorderColor="#999999" BorderStyle="None" BorderWidth="1px">
-                <RowStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Center" 
+                BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" 
+                DataSourceID="uaernameNpassword" GridLines="Horizontal">
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Center" 
                     VerticalAlign="Middle" />
                 <Columns>
                     <asp:BoundField DataField="Branch_ID" HeaderText="Branch_ID" 
                         SortExpression="Branch_ID" />
-                    <asp:BoundField DataField="Branch_Forget" HeaderText="Branch_Forget"
-                        SortExpression="Branch_Forget" FooterStyle-HorizontalAlign="NotSet" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
-                        <HeaderStyle HorizontalAlign="Center" VerticalAlign="Middle" 
-                        BorderStyle="None" />
-                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
-                    </asp:BoundField>
-                        <asp:HyperLinkField HeaderText="Solution" Text="To_Send" DataNavigateUrlFields="Branch_ID,Branch_Forget" DataNavigateUrlFormatString="B-forget.aspx?field=({0},{1})"
-                        ItemStyle-BorderStyle="None" ItemStyle-HorizontalAlign="Center" 
-                        ItemStyle-VerticalAlign="Middle" >
-                    <ItemStyle BorderStyle="None" HorizontalAlign="Center" VerticalAlign="Middle" />
-                    </asp:HyperLinkField>
+                    <asp:BoundField DataField="Branch_Forget" HeaderText="Branch_Forget" 
+                        SortExpression="Branch_Forget" />
+                        <asp:HyperLinkField 
+                        HeaderText="U/P_SEND" 
+                        Text="TO_SEND" 
+                        NavigateUrl="~/B-forget.aspx" 
+                        DataNavigateUrlFields="Branch_Forget,Branch_ID" 
+                        DataNavigateUrlFormatString="B-forget.aspx?fieldn={0}&field={1}" 
+                        SortExpression="Branch_Forget"
+                        FooterStyle-BorderStyle="NotSet" />
                 </Columns>
-                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-                <AlternatingRowStyle BackColor="#DCDCDC" />
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <AlternatingRowStyle BackColor="#F7F7F7" />
             </asp:GridView>
 
             <asp:SqlDataSource ID="uaernameNpassword" runat="server"
                 ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString6 %>"
-                
                 SelectCommand="SELECT [Branch_Forget], [Branch_ID] FROM [usernameNpassword]">
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
