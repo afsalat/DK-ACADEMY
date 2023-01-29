@@ -9,12 +9,12 @@
                 BorderWidth="1px" DataSourceID="SqlDataSource1" GridLines="Horizontal">
                 <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <Columns>
-                    <asp:BoundField DataField="Branch_ID" HeaderText="Branch_ID" SortExpression="Branch_ID" />
+                    <asp:BoundField DataField="Email_ID" HeaderText="Email_ID" SortExpression="Email_ID" />
                     <asp:BoundField DataField="Branch_Forget" HeaderText="Branch_Forget"
                         SortExpression="Branch_Forget" />
                     <asp:HyperLinkField HeaderText="U/P_SEND" Text="TO_SEND" NavigateUrl="~/B-forget.aspx"
-                        DataNavigateUrlFields="Branch_Forget,Branch_ID"
-                        DataNavigateUrlFormatString="B-forget.aspx?fieldn={0}&field={1}" SortExpression="Branch_Forget"
+                        DataNavigateUrlFields="Email_ID,Branch_ID"
+                        DataNavigateUrlFormatString="B-forget.aspx?email={0}&bid={1}" SortExpression="Email_ID"
                         FooterStyle-BorderStyle="NotSet" />
                 </Columns>
                 <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
@@ -26,7 +26,7 @@
 
             <asp:SqlDataSource ID="uaernameNpassword" runat="server"
                 ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString6 %>"
-                SelectCommand="SELECT [Branch_Forget], [Branch_ID] FROM [usernameNpassword]">
+                SelectCommand="SELECT [Branch_ID], [Email_ID] FROM [Forget_requests]">
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                 ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString6 %>"
