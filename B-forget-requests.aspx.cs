@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 
-public partial class create_branch : System.Web.UI.Page
+public partial class none : System.Web.UI.Page
 {
     SqlConnection con;
     SqlCommand cmd, cmd3, cmd1;
@@ -21,10 +21,6 @@ public partial class create_branch : System.Web.UI.Page
     DataTable dt = new DataTable("conlist");
 
     protected void Page_Load(object sender, EventArgs e)
-    {
-        
-    }
-    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
     }
