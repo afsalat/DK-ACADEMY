@@ -16,17 +16,17 @@ public partial class B_update : System.Web.UI.Page
 {
     SqlCommand cmd, cmd1;
     Connection co = new Connection();
-    string id1,id2,email;
+    string id1,id2;
     DateTime currentDateTime = DateTime.Now;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        id1 = Request["fieldn"].ToString();
-        id2 = Request["field"].ToString();
+        id1 = Request["email"].ToString();
+        id2 = Request["bid"].ToString();
 
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from Forget_requests where Branch_Forget='" + id1 + "'", con);
+        SqlCommand cmd = new SqlCommand("select * from active_branches where Branch_ID='" + id2 + "'", con);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
@@ -34,12 +34,9 @@ public partial class B_update : System.Web.UI.Page
         Text1.Value = dr["User_Name"].ToString();
         Text2.Value = dr["Password"].ToString();
         dr.Close();
-
-        cmd1 = new SqlCommand("select Email from active_branches where Branch_ID='" + id2 + "'", con);
-        SqlDataReader dr1 = cmd1.ExecuteReader();
-        dr1.Read();
-        Label4.Text = dr1["Email"].ToString();
-        dr1.Close();
+        
+        TextBox1.Text = id2;
+        
         con.Close();
     }
     protected void Button2_Click(object sender, EventArgs e)
@@ -50,8 +47,10 @@ public partial class B_update : System.Web.UI.Page
     {
         SqlConnection con = co.Connect();
         con.Open();
-        cmd = new SqlCommand("UPDATE Forget_requests SET Branch_Forget = 'Solved on : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
+        cmd = new SqlCommand("UPDATE Forget_requests SET Forget_ID = 'Solved on : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
         cmd.ExecuteNonQuery();
+        cmd1 = new SqlCommand("delete from Forget_requests where Branch_ID='" + id2 + "'", con);
+        cmd1.ExecuteNonQuery();
         con.Dispose();
         con.Close();        
         Response.Redirect("B-forget-requests.aspx");
