@@ -43,7 +43,6 @@ public partial class b_details_forms : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
 
-        
         Response.Redirect("branch_request.aspx");
         
     }

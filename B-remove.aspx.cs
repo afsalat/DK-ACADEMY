@@ -25,7 +25,7 @@ public partial class B_remove : System.Web.UI.Page
     {
         SqlConnection con = co.Connect();
         con.Open();
-        cmd = new SqlCommand("delete from usernameNpassword where Branch_ID='" + id + "'", con);
+        cmd = new SqlCommand("delete from active_branches where Branch_ID='" + id + "'", con);
         cmd.ExecuteNonQuery();
         con.Dispose();
         con.Close();

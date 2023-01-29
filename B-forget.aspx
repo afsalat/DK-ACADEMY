@@ -75,9 +75,10 @@
                 width: 364px;
                 height: -12px;
             }
-            .style8
-            {
+
+            .style8 {
                 width: 171px;
+                height: 29px;
             }
         </style>
     </head>
@@ -105,10 +106,11 @@
                         <br />
                         <asp:Label ID="Label3" runat="server" Text="Password " Font-Bold="True" Font-Names="Arial">
                         </asp:Label>
-                        <span lang="en-in">&nbsp; 
-                        <input runat="server" id="Text2" class="style8" type="text" /></span></div>
+                        <span lang="en-in">&nbsp;
+                            <input runat="server" id="Text2" class="style8" type="text" /></span>
+                    </div>
                     <div class="style6">
-                        <asp:Button  ID="Button1" runat="server" Text="Send" Height="32px" Width="78px"
+                        <asp:Button ID="Button1" runat="server" Text="Send" Height="32px" Width="78px"
                             Font-Names="Bahnschrift SemiBold" onclick="Button1_Click" />
                         <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
@@ -116,7 +118,8 @@
                             Font-Names="Bahnschrift SemiBold" onclick="Button2_Click" />
                         <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Size="1px" Text="Label">
                         </asp:Label>
-                        <input id="Submit" type="submit" value="submit" /></div>
+                        <input id="Submit" type="submit" value="submit" />
+                    </div>
 
                 </div>
             </div>
@@ -129,8 +132,8 @@
             var password = document.getElementById('TextBox3').value;
             var email = document.getElementById('Label4').value;
             var Button1 = document.getElementById('Button1');
-            
-            alert(username,password,email);
+
+            alert(username, password, email);
 
 
             document.getElementById('form').addEventListener('submit', function (event) {

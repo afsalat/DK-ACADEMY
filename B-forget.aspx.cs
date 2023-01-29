@@ -26,7 +26,7 @@ public partial class B_update : System.Web.UI.Page
 
         SqlConnection con = co.Connect();
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from usernameNpassword where Branch_Forget='" + id1 + "'", con);
+        SqlCommand cmd = new SqlCommand("select * from Forget_requests where Branch_Forget='" + id1 + "'", con);
 
         SqlDataReader dr = cmd.ExecuteReader();
         dr.Read();
@@ -35,7 +35,7 @@ public partial class B_update : System.Web.UI.Page
         Text2.Value = dr["Password"].ToString();
         dr.Close();
 
-        cmd1 = new SqlCommand("select Email from branch_request where Branch_ID='" + id2 + "'", con);
+        cmd1 = new SqlCommand("select Email from active_branches where Branch_ID='" + id2 + "'", con);
         SqlDataReader dr1 = cmd1.ExecuteReader();
         dr1.Read();
         Label4.Text = dr1["Email"].ToString();
@@ -50,7 +50,7 @@ public partial class B_update : System.Web.UI.Page
     {
         SqlConnection con = co.Connect();
         con.Open();
-        cmd = new SqlCommand("UPDATE usernameNpassword SET Branch_Forget = 'Solved on : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
+        cmd = new SqlCommand("UPDATE Forget_requests SET Branch_Forget = 'Solved on : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
         cmd.ExecuteNonQuery();
         con.Dispose();
         con.Close();        

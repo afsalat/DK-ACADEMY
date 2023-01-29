@@ -128,8 +128,7 @@
                             <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
                             <br />
                         </div>
-                        <hr class="style14" style="background-color: #006666; color: #009999;" 
-                        noshade="noshade" />
+                        <hr class="style14" style="background-color: #006666; color: #009999;" noshade="noshade" />
                         <br />
                         <div class="style12">
                             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -156,8 +155,7 @@
                         </div>
                         <div class="style13">
                             <asp:Button ID="Button1" runat="server" Height="27px" Text="Approved" Width="82px"
-                                Font-Bold="True" 
-                                onclick="Button1_Click" />
+                                Font-Bold="True" onclick="Button1_Click" />
                             <asp:Button ID="Button2" runat="server" Height="27px" Text="Rejected" Width="82px"
                                 Font-Bold="True" onclick="Button2_Click" />
                             <asp:Button ID="Button3" runat="server" Height="27px" Text="Later" Width="82px"
