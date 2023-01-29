@@ -1,10 +1,11 @@
 body{
     margin: 0%;
+    padding: 0;
 }
 
 .back{
     width: 100%;
-    height: 5vh;
+    min-height: 5vh;
     justify-content: end;
     display: flex;
     align-items: center;
@@ -25,42 +26,83 @@ body{
 .back a:hover{
     text-shadow: 6px 0px 10px black;
     transition: 800ms;
+    color: rgb(123, 213, 216);
+    text-decoration: none;
+}
+
+.contain{
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .main-box{
-    width: 100%;
-    height: 95vh;
+    min-height: 95vh;
     background-color: rgba(95, 158, 160, 0.931);
-    display: flex;
-    justify-content: space-around;
+    display: block;
     align-items: center;
 }
 
-.main-box .sub-main-box1,.sub-main-box2{
+.main-box .sub-main-box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box1 .request:hover{
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms;
+    border: none;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box2 .status:hover{
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms;
+    border: none;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box3 .contact:hover{
+    box-shadow: 5px 5px 15px black;
+    transition: 500ms;
+    border: none;
+    text-decoration: none;
+}
+
+.main-box .sub-main-box1 .request{
+    overflow: hidden;
     width: 40vh;
     height: 50vh;
     border-radius: 6%;
-    background-color:rgb(187, 227, 227);
+    background-color: #DCEDFE;
     border: 1px solid rgb(70, 111, 113);
     transition: 1s;
     text-decoration: none;
 }
 
-.main-box .sub-main-box1:hover{
-    box-shadow: 5px 5px 15px black;
-    transition: 500ms;
-    border: none;
-}
-
-.main-box .sub-main-box2:hover{
-    box-shadow: 5px 5px 15px black;
-    transition: 500ms;
-    border: none;
-}
-
-.main-box .sub-main-box1 .request{
+.main-box .sub-main-box1 .request .request-box1{
+    background-image: url('https://www.totaljobs.com/advice/wp-content/uploads/how-to-fill-in-an-application-form-compressor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
     width: 100%;
-    height: 100%;
 }
 
 .main-box .sub-main-box1 .request .request-box2{
@@ -69,11 +111,30 @@ body{
     font-family: cursive;
     color: cadetblue;
     text-shadow: 2px 0px 2px rgb(44, 75, 76);
+    margin-top: 10px;
+
 }
 
 .main-box .sub-main-box2 .status{
+    overflow: hidden;
+    width: 40vh;
+    height: 50vh;
+    border-radius: 6%;
+    background-color:rgb(250, 255, 255);
+    border: 1px solid rgb(70, 111, 113);
+    transition: 1s;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.main-box .sub-main-box2 .status .status-box1{
+    background-image: url('https://i.pinimg.com/originals/e2/c9/94/e2c99424da6f3568bfbf29d535f31766.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
     width: 100%;
-    height: 100%;
+
 }
 
 .main-box .sub-main-box2 .status .status-box2{
@@ -82,4 +143,38 @@ body{
     font-family: cursive;
     color: cadetblue;
     text-shadow: 2px 0px 2px rgb(41, 70, 71);
+
+}
+
+.main-box .sub-main-box3 .contact{
+    overflow: hidden;
+    width: 40vh;
+    height: 50vh;
+    border-radius: 6%;
+    background-color:rgb(250, 255, 255);
+    border: 1px solid rgb(70, 111, 113);
+    transition: 1s;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-box .sub-main-box3 .contact .contact-box1{
+    background-image: url('https://www.pngitem.com/pimgs/m/207-2071237_customer-service-icon-customer-service-flat-icon-png.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 100%;
+
+}
+
+.main-box .sub-main-box3 .contact .contact-box2{
+    text-align: center;
+    margin-top: 10px;
+    font-family: cursive;
+    color: cadetblue;
+    font-size: small;
+    text-shadow: 2px 0px 2px rgb(41, 70, 71);
+
 }
