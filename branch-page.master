@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="branch-page.master.cs" Inherits="branch_page" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body
+        {
+        	margin:0;
+        	padding:0;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 567px;
+        }
+        .style2
+        {
+            width: 100%;
+            height: 20%;
+        }
+        .style3
+        {
+            width: 100%;
+            height: 80%;
+        }
+        .style4
+        {
+            height: 100%;
+        }
+        .style5
+        {
+            width: 100%;
+            height: 113px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td>
+                <table class="style2">
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td align="center">
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span lang="en-in">DK ACADEMY</span></td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="width:100%;">
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <span lang="en-us">Dash Board</span></td>
+                                    <td align="center">
+                                        <span lang="en-in">Course</span></td>
+                                    <td align="center">
+                                        <span lang="en-us">Student</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table style="width:100%;">
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <span lang="en-us">Transaction</span></td>
+                                    <td align="center">
+                                        <span lang="en-us">Event Announcement</span></td>
+                                    <td align="center">
+                                        <span lang="en-us">Exam Schedule</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table align="center" style="width:100%;">
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                    <td align="center">
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <span lang="en-us">Live Class</span></td>
+                                    <td align="center">
+                                        <span lang="en-us">Settings</span></td>
+                                    <td align="center">
+                                        <span lang="en-us">Report</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <table class="style3">
+                    <tr>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                <p class="style4">
+                                    <br />
+                                </p>
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    </table>
+            </td>
+        </tr>
+        </table>
+    </form>
+    <br />
+    <table bgcolor="#660066" class="style5">
+        <tr>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
