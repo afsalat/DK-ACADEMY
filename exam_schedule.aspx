@@ -14,8 +14,9 @@
         {
         	border-radius:15px;
             box-shadow:3px 3px 5px black;
-            height: 100%;
-            width: 100%;
+            height: 95%;
+            width: 95%;
+            margin-left:2%;
         }
     </style>
 </asp:Content>

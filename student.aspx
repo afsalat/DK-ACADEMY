@@ -9,19 +9,20 @@
         .style6
         {
         	border-radius:15px;
-            box-shadow:3px 3px 5px black;
+            box-shadow:6px 6px 15px black;
             height: 100%;
-            width: 100%;
+            width: 95%;
+            margin-left:3%;
         }
         .style7
         {
             width: 100%;
-            
+            height: 361px;
         }
         .style8
         {
             width: 100%;
-            height: 50px;
+            height: 14px;
         }
         .style9
         {
@@ -34,13 +35,16 @@
         }
         .style11
         {
-        	height:90%;
+        	height:197px;
         	width: 100%;
+        	overflow-y: scroll;
+            overflow: hidden;
         }
         .style12
         {
         	height:10%;
         	width: 100%;
+        	
         }
         </style>
 </asp:Content>
@@ -92,7 +96,8 @@
                                </tr>
                                <tr>
                                    <td class="style9" align="right">
-                                       <span style="font-family: Arial; font-size: large; font-weight: bold; color: #2E4B48;">+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                       <span style="font-family: Arial; font-size: large; font-weight: bold; color: #2E4B48; cursor: pointer;">
+                                      &nbsp;&nbsp;&nbsp; +</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                    </td>
                                </tr>
                                <tr>
@@ -108,8 +113,9 @@
             <tr>
                 <td class="style11">
                     <asp:GridView ID="GridView1" runat="server" Height="100%" Width="100%" 
-                        AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" 
-                        DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                        AutoGenerateColumns="False" CellPadding="4" 
+                        DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" 
+                        AllowPaging="True" BackColor="#1C5E55" HorizontalAlign="Right">
                         <RowStyle BackColor="#E3EAEB" HorizontalAlign="Center" VerticalAlign="Middle" />
                         <Columns>
                             <asp:BoundField DataField="std_name" HeaderText="std_name" 
