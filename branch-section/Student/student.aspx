@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/branch-page.master" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/branch-section/Branch_Page/branch-page.master" %>
 
 <script runat="server">
 

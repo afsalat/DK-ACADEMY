@@ -121,17 +121,17 @@
                                     <td align="center">
                                         <asp:LinkButton class="LinkButton1" ID="LinkButton1" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/dashboard.aspx">&nbsp;Dash Board&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Dash_Board/dashboard.aspx">&nbsp;Dash Board&nbsp;</asp:LinkButton>
                                     </td>
                                     <td align="center">
                                          <asp:LinkButton class="LinkButton1" ID="LinkButton2" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/student.aspx">&nbsp;Students&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Student/student.aspx">&nbsp;Students&nbsp;</asp:LinkButton>
                                     </td>
                                     <td align="center">
                                          <asp:LinkButton class="LinkButton1" ID="LinkButton3" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/course.aspx">&nbsp;Course&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Course/course.aspx">&nbsp;Course&nbsp;</asp:LinkButton>
                                     </td>
                                 </tr>
                             </table>
@@ -158,17 +158,17 @@
                                     <td align="center">
                                         <asp:LinkButton class="LinkButton1" ID="LinkButton4" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/Transaction.aspx">&nbsp;Transations&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Transation/Transaction.aspx">&nbsp;Transations&nbsp;</asp:LinkButton>
                                     </td>
                                     <td align="center">
                                         <asp:LinkButton class="LinkButton1" ID="LinkButton5" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/event_announcement.aspx">&nbsp;Event Annonsment&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Event_Annoucement/event_announcement.aspx">&nbsp;Event Annonsment&nbsp;</asp:LinkButton>
                                      </td>
                                     <td align="center">
                                          <asp:LinkButton class="LinkButton1" ID="LinkButton6" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/exam_schedule.aspx">&nbsp;Exam Schedule&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Exam_Schedule/exam_schedule.aspx">&nbsp;Exam Schedule&nbsp;</asp:LinkButton>
                                     </td>
                                 </tr>
                             </table>
@@ -195,17 +195,16 @@
                                     <td align="center">
                                          <asp:LinkButton class="LinkButton1" ID="LinkButton7" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/live_class.aspx">&nbsp;Live Class&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Live_Class/live_class.aspx">&nbsp;Live Class&nbsp;</asp:LinkButton>
                                     </td>
                                     <td align="center">
                                          <asp:Menu ID="Menu1" runat="server" BackColor="#339966" 
                                              DynamicHorizontalOffset="2" Font-Names="Calibri" Font-Size="Medium" 
                                              ForeColor="Black" StaticSubMenuIndent="10px" Orientation="Horizontal" 
                                              CssClass="menu1" Font-Bold="True" EnableTheming="True" ItemWrap="True">
-                                             <StaticMenuStyle BackColor="White" VerticalPadding="4px" />
+                                             <StaticMenuStyle BackColor="White" />
                                              <StaticSelectedStyle BackColor="#339966" ForeColor="Black" />
-                                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="4px" 
-                                                 ItemSpacing="2px" />
+                                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="4px" />
                                              <DynamicHoverStyle ForeColor="White" />
                                              <DynamicMenuStyle BackColor="#226845" />
                                              <DynamicSelectedStyle BackColor="#339966" />
@@ -227,7 +226,7 @@
                                     <td align="center">
                                           <asp:LinkButton class="LinkButton1" ID="LinkButton9" runat="server" BorderStyle="None" 
                                             Font-Bold="True" Font-Names="Calibri" Font-Underline="False" 
-                                            PostBackUrl="~/report.aspx" Height="19px">&nbsp;Report&nbsp;</asp:LinkButton>
+                                            PostBackUrl="~/branch-section/Report/report.aspx" Height="19px">&nbsp;Report&nbsp;</asp:LinkButton>
                                     </td>
                                 </tr>
                             </table>
