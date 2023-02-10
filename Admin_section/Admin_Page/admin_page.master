@@ -1,0 +1,209 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin_page.master.cs" Inherits="admin_page" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body
+        {
+        	margin: 0;
+        	padding: 0;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 563px;
+        }
+        .style2
+        {
+            height: 81px;
+        }
+        .style3
+        {
+            height: 81px;
+            width: 345px;
+        }
+        .style4
+        {
+            width: 345px;
+            height: 430px;
+        }
+        .style5
+        {
+            height: 81px;
+            width: 727px;
+        }
+        .style6
+        {
+            height: 25px;
+        }
+        .style7
+        {
+            height: 430px;
+        }
+        .style9
+        {
+            height: 23px;
+        }
+        .style10
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .style11
+        {
+            height: 63px;
+        }
+        .style12
+        {
+            width: 96%;
+            height: 100%;
+            margin-right: 0px;
+        }
+        .style13
+        {
+            width: 100%;
+            height: 102px;
+        }
+    </style>
+</head>
+<body bgcolor="#66ccff">
+    <form id="form1" runat="server">
+    <table class="style1" style="padding: 0px; margin: 0px">
+        <tr>
+            <td align="center" class="style3" style="margin: 0px; padding: 0px">
+                <asp:Image ID="Image1" runat="server" Height="37px" ImageUrl="~/Admin_section/Admin_Page/download.png" 
+                    Width="45px" />
+            </td>
+            <td class="style5" style="width: 60%">
+                <table align="center" class="style13">
+                    <tr>
+                        <td align="center">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" class="style6">
+                            <span lang="en-in" 
+                                style="font-family: 'Leelawadee UI'; font-weight: bold; font-size: 25px;">DK ACADEMY</span></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span lang="en-in" style="font-size: x-small">* Dk Group of institutions *</span></td>
+                    </tr>
+                </table>
+            </td>
+            <td align="center" class="style2" style="width: 100%">
+                <asp:Button ID="Button8" runat="server" Text="Logout" BackColor="#3399FF" 
+                    BorderStyle="None" Font-Bold="True" Font-Names="Consolas" ForeColor="White" 
+                    PostBackUrl="~/home.html" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style4" style="margin: 0px; padding: 0px; width: 20%;">
+                <table class="style12" bgcolor="#228FF2" style="width: 100%">
+                    <tr>
+                        <td class="style6" bgcolor="#3399FF">
+                            <asp:Button ID="Button1" runat="server" Height="65px" Text="PROFILE" 
+                                Width="100%" PostBackUrl="~/Admin_section/Profile/profile.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF">
+                            <asp:Button ID="Button2" runat="server" Height="65px" Text="EMP.STATUS" 
+                                Width="100%" PostBackUrl="~/Admin_section/Emp_Status/emp_status.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF">
+                            <asp:Button ID="Button3" runat="server" Height="65px" Text="EMP.DETAILS" 
+                                Width="100%" PostBackUrl="~/Admin_section/Emp_Details/emp_details.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9" bgcolor="#3399FF">
+                            <asp:Button ID="Button4" runat="server" Height="65px" Text="STD.DETAILS" 
+                                Width="100%" PostBackUrl="~/Admin_section/Std_Details/std_details.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF">
+                            <asp:Button ID="Button5" runat="server" Height="65px" Text="BRANCH REQUEST" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Request/branch_request.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF" class="style11">
+                            <asp:Button ID="Button6" runat="server" Height="65px" Text="CREATE BRANCH" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Create/create_branch.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF">
+                            <asp:Button ID="Button7" runat="server" Height="65px" Text="BRANCH FORGET REQUEST" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Forget/B-forget-requests.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#3399FF">
+                            <asp:Button ID="Button9" runat="server" Height="65px" Text="HELP" 
+                                Width="100%" PostBackUrl="~/Admin_section/Help/help.aspx" BackColor="#0066FF" 
+                                BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="left" class="style7" colspan="2" 
+                style="padding: 0px; margin: 0px; width: 80%">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p class="style10" align="left" dir="ltr" style="width: 100%">
+                    <asp:Panel ID="Panel1" runat="server">
+                    </asp:Panel>
+                    </p>
+
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="margin: 0px; padding: 0px;">
+                &nbsp;</td>
+        </tr>
+    </table>
+    </form>
+    
+    
+    
+    
+
+<script type="text/javascript"> 
+   $(document).ready(function () { 
+ 
+      $('#GridView1 thead').addClass('headerRow'); 
+ 
+      $('#Button1').mouseover(function () { 
+         $(this).addClass('highlightRow'); 
+      }).mouseout(function () { 
+         $(this).removeClass('highlightRow'); 
+      }).click(function () { 
+         $(this).toggleClass('selectedRow'); 
+      });
+
+  }); 
+   
+   
+</script>
+</body>
+</html>
