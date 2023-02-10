@@ -60,6 +60,17 @@
             color: #009999;
             text-shadow: 0px 2px 5px black;
         }
+        .menu1
+        {
+        	text-decoration:none;
+        }
+        .menu1:hover
+        {
+            color:White;
+            background-color:#1C5E55;
+            border-radius:7px;
+            Transition:50ms;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +94,8 @@
                             &nbsp;</td>
                         <td align="center">
                             <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Gadugi" 
-                                Font-Size="Small" ForeColor="#016964" Text="Logout" Width="69px" />
+                                Font-Size="Small" ForeColor="#016964" Text="Logout" Width="69px" 
+                                PostBackUrl="~/home.aspx" />
                         </td>
                     </tr>
                     <tr>
@@ -186,20 +198,20 @@
                                             PostBackUrl="~/live_class.aspx">&nbsp;Live Class&nbsp;</asp:LinkButton>
                                     </td>
                                     <td align="center">
-                                         <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
-                                             DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="1.0em" 
-                                             ForeColor="#284E98" StaticSubMenuIndent="10px" Orientation="Horizontal">
-                                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-                                             <DynamicMenuStyle BackColor="#B5C7DE" />
-                                             <DynamicItemTemplate>
-                                                 <%# Eval("Text") %>
-                                             </DynamicItemTemplate>
-                                             <DynamicSelectedStyle BackColor="#507CD1" />
+                                         <asp:Menu ID="Menu1" runat="server" BackColor="#339966" 
+                                             DynamicHorizontalOffset="2" Font-Names="Calibri" Font-Size="Medium" 
+                                             ForeColor="Black" StaticSubMenuIndent="10px" Orientation="Horizontal" 
+                                             CssClass="menu1" Font-Bold="True" EnableTheming="True" ItemWrap="True">
+                                             <StaticMenuStyle BackColor="White" />
+                                             <StaticSelectedStyle BackColor="#339966" ForeColor="Black" />
+                                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="4px" />
+                                             <DynamicHoverStyle ForeColor="White" />
+                                             <DynamicMenuStyle BackColor="#226845" />
+                                             <DynamicSelectedStyle BackColor="#339966" />
                                              <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                             <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                                             <StaticHoverStyle ForeColor="White" />
                                              <Items>
-                                                 <asp:MenuItem Text="Settings" Value="Settings">
+                                                 <asp:MenuItem Text="Settings" Value="Settings" Selectable="False">
                                                      <asp:MenuItem Text="aaaa" Value="aaaa"></asp:MenuItem>
                                                      <asp:MenuItem Text="bbbbbbbb" Value="bbbbbbbb"></asp:MenuItem>
                                                      <asp:MenuItem Text="ccccc" Value="ccccc"></asp:MenuItem>
