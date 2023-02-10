@@ -16,13 +16,11 @@ using System.Data.SqlClient;
 
 public partial class branch_up_forget : System.Web.UI.Page
 {
-
-    SqlConnection con;
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+    
     SqlCommand cmd, id_code;
-    Connection co = new Connection();
     protected void Page_Load(object sender, EventArgs e)
     {
-        con = co.Connect();
         con.Open();
     }
     protected void Button1_Click(object sender, EventArgs e)

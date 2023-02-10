@@ -16,13 +16,12 @@ using System.Data.SqlClient;
 
 public partial class Brequest : System.Web.UI.Page
 {
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
 
-    SqlConnection con;
     SqlCommand cmd,id_code;
-    Connection co = new Connection();
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        con = co.Connect();
         con.Open();
     }
     protected void Button1_Click(object sender, EventArgs e)
@@ -46,7 +45,7 @@ public partial class Brequest : System.Web.UI.Page
         string id = upperN + code;
 
 
-        Response.Write("<div id='infobox'><div id='subbox1'>Application code : " + id + "</div><div id='subbox2'>&nbsp; Dear " + first_name + ",<br/></div><div id=''subbox3><ul><li>This is sample warning message</li><br/><li>This is sample warning message</li><br/><li>This is sample warning message</li></ul></div><div id='subbox4'><a href='home.html' id='back-b'>Home >&nbsp;&nbsp;</a></div></div>");
+        Response.Write("<div id='infobox'><div id='subbox1'>Application code : " + id + "</div><div id='subbox2'>&nbsp; Dear " + first_name + ",<br/></div><div id=''subbox3><ul><li>This is sample warning message</li><br/><li>This is sample warning message</li><br/><li>This is sample warning message</li></ul></div><div id='subbox4'><a href='../Home_Page/home.html' id='back-b'>Home >&nbsp;&nbsp;</a></div></div>");
         cmd = new SqlCommand("insert into Branch_Request values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + DropDownList1.Text + "','" + RadioButtonList1.SelectedItem.Text + "','" + TextBox3.Text + "','" + TextBox5.Text + "','" + TextBox4.Text + "','" + id + "')", con);
         cmd.ExecuteNonQuery();
     }
