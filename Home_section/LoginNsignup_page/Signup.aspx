@@ -181,7 +181,8 @@
                     <tr>
                         <td align="center" class="style11">
                             <span lang="en-in">&nbsp;</span><asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="False" 
-                                Font-Names="Corbel" Font-Underline="True" NavigateUrl="~/Login.aspx">Already have an account!</asp:HyperLink>
+                                Font-Names="Corbel" Font-Underline="True" 
+                                NavigateUrl="~/Home_section/LoginNsignup_page/Login.aspx">Already have an account!</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
@@ -202,7 +203,8 @@
                     <tr>
                         <td align="left" style="text-align: right">
                             <a href="./home.html"><asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
-                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF">Back &gt;</asp:LinkButton></a>
+                                Font-Names="Bahnschrift" Font-Underline="False" ForeColor="#01AABF" 
+                                PostBackUrl="~/Home_section/Home_Page/home.html">Back &gt;</asp:LinkButton></a>
                             <span lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                             <br />
                             <br />
