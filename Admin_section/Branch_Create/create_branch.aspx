@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin_page.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_section/Admin_Page/admin_page.master" AutoEventWireup="true"
     CodeFile="create_branch.aspx.cs" Inherits="create_branch" %>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

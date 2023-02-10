@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/admin_page.master" AutoEventWireup="true"
+<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_section/Admin_Page/admin_page.master" AutoEventWireup="true"
     CodeFile="branch_request.aspx.cs" Inherits="branch_request" %>
 
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -11,7 +11,7 @@
                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" BorderColor="#000066" BorderStyle="Solid" />
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="ID"
-                        DataNavigateUrlFormatString="b_details_forms.aspx?field={0}" HeaderText="View More Details"
+                        DataNavigateUrlFormatString="~/Admin_section/Branch_Request/b_details_forms.aspx?field={0}" HeaderText="View More Details"
                         Text="View" />
                 </Columns>
                 <FooterStyle BackColor="#5D7B9D" ForeColor="White" Font-Bold="True" />

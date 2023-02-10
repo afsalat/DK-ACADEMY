@@ -14,8 +14,9 @@ using System.Data.SqlClient;
 
 public partial class B_update : System.Web.UI.Page
 {
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+
     SqlCommand cmd, cmd1;
-    Connection co = new Connection();
     string id1,id2;
     DateTime currentDateTime = DateTime.Now;
 
@@ -24,7 +25,6 @@ public partial class B_update : System.Web.UI.Page
         id1 = Request["email"].ToString();
         id2 = Request["bid"].ToString();
 
-        SqlConnection con = co.Connect();
         con.Open();
         SqlCommand cmd = new SqlCommand("select * from active_branches where Branch_ID='" + id2 + "'", con);
 
@@ -41,11 +41,11 @@ public partial class B_update : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("B-forget-requests.aspx");
+
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlConnection con = co.Connect();
+
         con.Open();
         cmd = new SqlCommand("UPDATE Forget_requests SET Forget_ID = 'Solved on : "+currentDateTime+"' WHERE Branch_ID='"+TextBox1.Text+"'", con);
         cmd.ExecuteNonQuery();
@@ -53,6 +53,6 @@ public partial class B_update : System.Web.UI.Page
         cmd1.ExecuteNonQuery();
         con.Dispose();
         con.Close();        
-        Response.Redirect("B-forget-requests.aspx");
+
     }
 }

@@ -111,11 +111,13 @@
                     </div>
                     <div class="style6">
                         <asp:Button ID="Button1" runat="server" Text="Send" Height="32px" Width="78px"
-                            Font-Names="Bahnschrift SemiBold" onclick="Button1_Click" />
+                            Font-Names="Bahnschrift SemiBold" onclick="Button1_Click" 
+                            PostBackUrl="~/Admin_section/Branch_Forget/B-forget-requests.aspx" />
                         <span lang="en-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                         <asp:Button ID="Button2" runat="server" Text="Cancel" Height="32px" Width="78px"
-                            Font-Names="Bahnschrift SemiBold" onclick="Button2_Click" />
+                            Font-Names="Bahnschrift SemiBold" onclick="Button2_Click" 
+                            PostBackUrl="~/Admin_section/Branch_Forget/B-forget-requests.aspx" />
                         <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Size="1px" Text="Label">
                         </asp:Label>
                         <input id="Submit" type="submit" value="submit" />

@@ -53,12 +53,13 @@
                     </div>
                     <div class="style4">
                         <asp:Button ID="Button1" runat="server" Height="38px" Text="Conform" Width="84px"
-                            onclick="Button1_Click" />
+                            onclick="Button1_Click" 
+                            PostBackUrl="~/Admin_section/Branch_Create/create_branch.aspx" />
                         <span
                             lang="en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                         <asp:Button ID="Button2" runat="server" Height="38px" Text="Cancel" Width="84px"
-                            PostBackUrl="~/create_branch.aspx" />
+                            PostBackUrl="~/Admin_section/Branch_Create/create_branch.aspx" />
                     </div>
                 </div>
 

@@ -15,14 +15,15 @@ using System.Data.SqlClient;
 public partial class b_details_forms : System.Web.UI.Page
 {
 
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+
     SqlCommand cmd ,cmd1;
-    Connection co = new Connection();
+
     string id;
     protected void Page_Load(object sender, EventArgs e)
     {
         id = Request["field"].ToString();
 
-        SqlConnection con = co.Connect();
         con.Open();
         cmd = new SqlCommand("select * from branch_request where ID='"+id+"'", con);
 
@@ -43,17 +44,16 @@ public partial class b_details_forms : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
 
-        Response.Redirect("branch_request.aspx");
+        Response.Redirect("~/Admin_section/Branch_Request/branch_request.aspx");
         
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlConnection con = co.Connect();
         con.Open();
         cmd1 = new SqlCommand("INSERT INTO active_branches (First_Name,Last_Name,Qualification,Gender,Phone,Email_ID,Address,ID) VALUES('" + Label1.Text + "','" + Label15.Text + "','" + Label7.Text + "','" + Label5.Text + "','" + Label9.Text + "','" + Label11.Text + "','" + Label3.Text + "','" + id + "')", con);
         cmd1.ExecuteNonQuery();
 
-        Response.Redirect("B-create.aspx?Parameter=" + id);
+        Response.Redirect("~/Admin_section/Branch_Request/B-create.aspx?Parameter=" + id);
 
 
     }

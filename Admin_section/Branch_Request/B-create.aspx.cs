@@ -16,15 +16,14 @@ using System.Data.SqlClient;
 
 public partial class create : System.Web.UI.Page
 {
-    SqlConnection con;
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+
     SqlCommand cmd,cmd1, id_code,first_name;
-    Connection co = new Connection();
     string bID,xt,xb;
     protected void Page_Load(object sender, EventArgs e)
     {
         bID = Request["parameter"].ToString();
 
-        con = co.Connect();
         con.Open();
 
         first_name = new SqlCommand("select * from active_branches where ID='" + bID + "'", con);
@@ -53,7 +52,7 @@ public partial class create : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("branch_request.aspx");
+        Response.Redirect("~/Admin_section/Branch_Request/branch_request.aspx");
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -65,6 +64,6 @@ public partial class create : System.Web.UI.Page
         con.Dispose();
         con.Close();
 
-        Response.Redirect("branch_request.aspx");
+        Response.Redirect("~/Admin_section/Branch_Request/branch_request.aspx");
     }
 }

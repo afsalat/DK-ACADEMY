@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin_page.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_section/Admin_Page/admin_page.master" AutoEventWireup="true"
     CodeFile="B-forget-requests.aspx.cs" Inherits="none" %>
 
     <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
@@ -12,7 +12,7 @@
                     <asp:BoundField DataField="Branch_ID" HeaderText="Branch_ID" 
                         SortExpression="Branch_ID" />
                     <asp:BoundField DataField="Email_ID" HeaderText="Email_ID" SortExpression="Email_ID" />
-                    <asp:HyperLinkField HeaderText="U/P_SEND" Text="TO_SEND" NavigateUrl="~/B-forget.aspx"
+                    <asp:HyperLinkField HeaderText="U/P_SEND" Text="TO_SEND" NavigateUrl="~/Admin_section/Branch_Forget/B-forget.aspx"
                         DataNavigateUrlFields="Email_ID,Branch_ID"
                         DataNavigateUrlFormatString="B-forget.aspx?email={0}&bid={1}" SortExpression="Email_ID"
                         FooterStyle-BorderStyle="NotSet" />

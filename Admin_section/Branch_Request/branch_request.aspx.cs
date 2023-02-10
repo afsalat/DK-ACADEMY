@@ -14,15 +14,14 @@ using System.Data.SqlClient;
 
 public partial class branch_request : System.Web.UI.Page
 {
-    SqlConnection con;
+    SqlConnection con = new SqlConnection("Data Source=TIME-IS-MONEY--\\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True");
+
     SqlCommand cmd, cmd3, cmd1;
-    Connection co = new Connection();
 
     DataTable dt = new DataTable("conlist");
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        con = co.Connect();
         con.Open();
         cmd1 = new SqlCommand("select ID,First_Name,Email from branch_request", con);
         SqlDataReader dr1 = cmd1.ExecuteReader();

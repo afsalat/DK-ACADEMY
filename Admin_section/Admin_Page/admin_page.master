@@ -76,7 +76,7 @@
     <table class="style1" style="padding: 0px; margin: 0px">
         <tr>
             <td align="center" class="style3" style="margin: 0px; padding: 0px">
-                <asp:Image ID="Image1" runat="server" Height="37px" ImageUrl="~/download.png" 
+                <asp:Image ID="Image1" runat="server" Height="37px" ImageUrl="~/Admin_section/Admin_Page/download.png" 
                     Width="45px" />
             </td>
             <td class="style5" style="width: 60%">
@@ -108,56 +108,59 @@
                     <tr>
                         <td class="style6" bgcolor="#3399FF">
                             <asp:Button ID="Button1" runat="server" Height="65px" Text="PROFILE" 
-                                Width="100%" PostBackUrl="~/profile.aspx" BackColor="#0066FF" 
+                                Width="100%" PostBackUrl="~/Admin_section/Profile/profile.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
                             <asp:Button ID="Button2" runat="server" Height="65px" Text="EMP.STATUS" 
-                                Width="100%" PostBackUrl="~/emp_status.aspx" BackColor="#0066FF" 
+                                Width="100%" PostBackUrl="~/Admin_section/Emp_Status/emp_status.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
                             <asp:Button ID="Button3" runat="server" Height="65px" Text="EMP.DETAILS" 
-                                Width="100%" PostBackUrl="~/emp_details.aspx" BackColor="#0066FF" 
+                                Width="100%" PostBackUrl="~/Admin_section/Emp_Details/emp_details.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td class="style9" bgcolor="#3399FF">
                             <asp:Button ID="Button4" runat="server" Height="65px" Text="STD.DETAILS" 
-                                Width="100%" PostBackUrl="~/std_details.aspx" BackColor="#0066FF" 
+                                Width="100%" PostBackUrl="~/Admin_section/Std_Details/std_details.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
                             <asp:Button ID="Button5" runat="server" Height="65px" Text="BRANCH REQUEST" 
-                                Width="100%" PostBackUrl="~/branch_request.aspx" BackColor="#0066FF" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Request/branch_request.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF" class="style11">
                             <asp:Button ID="Button6" runat="server" Height="65px" Text="CREATE BRANCH" 
-                                Width="100%" PostBackUrl="~/create_branch.aspx" BackColor="#0066FF" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Create/create_branch.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
                             <asp:Button ID="Button7" runat="server" Height="65px" Text="BRANCH FORGET REQUEST" 
-                                Width="100%" PostBackUrl="~/B-forget-requests.aspx" BackColor="#0066FF" 
+                                Width="100%" 
+                                PostBackUrl="~/Admin_section/Branch_Forget/B-forget-requests.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
                     <tr>
                         <td bgcolor="#3399FF">
                             <asp:Button ID="Button9" runat="server" Height="65px" Text="HELP" 
-                                Width="100%" PostBackUrl="~/help.aspx" BackColor="#0066FF" 
+                                Width="100%" PostBackUrl="~/Admin_section/Help/help.aspx" BackColor="#0066FF" 
                                 BorderStyle="None" Font-Bold="True" Font-Names="Bahnschrift" />
                         </td>
                     </tr>
