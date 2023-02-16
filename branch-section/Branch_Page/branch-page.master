@@ -94,8 +94,7 @@
                             &nbsp;</td>
                         <td align="center">
                             <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Gadugi" 
-                                Font-Size="Small" ForeColor="#016964" Text="Logout" Width="69px" 
-                                PostBackUrl="~/home.aspx" />
+                                Font-Size="Small" ForeColor="#016964" Text="Logout" Width="69px" />
                         </td>
                     </tr>
                     <tr>
