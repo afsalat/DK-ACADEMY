@@ -1,21 +1,6 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/branch-section/Branch_Page/branch-page.master" %>
 
-    <script runat="server">
-        
-    protected void Page_Load(object sender, EventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 0;
-        }
-    protected void LinkButton10_Click(object sender, EventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 1;
-        }
 
-    protected void Button2_Click(object sender, EventArgs e)
-    {
-        
-    }
-</script>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         <style type="text/css">
@@ -42,7 +27,7 @@
             }
 
             .style10 {
-                width: 123%;
+                width: 99%;
                 height: 57px;
             }
 
@@ -56,16 +41,6 @@
                 display: block;
                 width: 100%;
                 height: 30px;
-            }
-
-            #LinkButton10 {
-
-                transition: 1s;
-            }
-
-            #LinkButton10:hover {
-                text-shadow: 2px 2px 4px black;
-                transition: 1s;
             }
             .form1
             {
@@ -121,8 +96,8 @@
                                         <td width="40%">
                                             <table style="width:100%;">
                                                 <tr>
-                                                    <td>
-                                                        &nbsp;</td>
+                                                    <td class="style9">
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -137,8 +112,8 @@
                                         <td width="30%">
                                             <table class="style10">
                                                 <tr>
-                                                    <td>
-                                                        &nbsp;</td>
+                                                    <td class="style9">
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -158,15 +133,13 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="right" class="style9">
-                                                        <asp:LinkButton ID="LinkButton10" runat="server"
-                                                            onclick="LinkButton10_Click" Font-Bold="True"
-                                                            Font-Names="Arial" Font-Underline="True"
-                                                            ForeColor="#00CC99">New Addmissin</asp:LinkButton>
+                                                        <asp:LinkButton ID="LinkButton1" runat="server">New Addmissin</asp:LinkButton>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
+                                                        
                                                         &nbsp;</td>
                                                 </tr>
                                             </table>
@@ -179,33 +152,26 @@
                             <td class="style11">
                                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True"
                                     AutoGenerateColumns="False" BackColor="#1C5E55" CellPadding="4"
-                                    DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="100%"
-                                    HorizontalAlign="Right" Width="100%">
+                                    DataSourceID="SqlDataSource3" ForeColor="#333333" GridLines="None" Height="100%"
+                                    HorizontalAlign="Right" Width="100%" EnableModelValidation="True">
                                     <RowStyle BackColor="#E3EAEB" HorizontalAlign="Center" VerticalAlign="Middle" />
-                                    <Columns>
-                                        <asp:BoundField DataField="std_name" HeaderText="std_name"
-                                            SortExpression="std_name" />
-                                        <asp:BoundField DataField="std_email" HeaderText="std_email"
-                                            SortExpression="std_email" />
-                                        <asp:BoundField DataField="std_course" HeaderText="std_course"
-                                            SortExpression="std_course" />
-                                        <asp:BoundField DataField="course_duration" HeaderText="course_duration"
-                                            SortExpression="course_duration" />
-                                        <asp:BoundField DataField="std_id" HeaderText="std_id"
-                                            SortExpression="std_id" />
-                                    </Columns>
                                     <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
                                     <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                                     <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                    <Columns>
+                                        <asp:BoundField DataField="std_name" HeaderText="std_name" SortExpression="std_name"></asp:BoundField>
+                                        <asp:BoundField DataField="std_email" HeaderText="std_email" SortExpression="std_email"></asp:BoundField>
+                                        <asp:BoundField DataField="std_course" HeaderText="std_course" SortExpression="std_course"></asp:BoundField>
+                                        <asp:BoundField DataField="std_id" HeaderText="std_id" SortExpression="std_id"></asp:BoundField>
+                                        <asp:BoundField DataField="branch_id" HeaderText="branch_id" SortExpression="branch_id"></asp:BoundField>
+                                        <asp:BoundField DataField="course_apply_time" HeaderText="course_apply_time" SortExpression="course_apply_time"></asp:BoundField>
+                                        <asp:BoundField DataField="course_duration" HeaderText="course_duration" SortExpression="course_duration"></asp:BoundField>
+                                    </Columns>
                                     <EditRowStyle BackColor="#7C6F57" />
                                     <AlternatingRowStyle BackColor="White" />
                                 </asp:GridView>
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-                                    ConnectionString="Data Source=TIME-IS-MONEY--\DARKKNIGHT;Initial Catalog=dk-academy;Integrated Security=True"
-                                    ProviderName="System.Data.SqlClient"
-                                    SelectCommand="SELECT [std_name], [std_email], [std_course], [course_duration], [std_id] FROM [student_status]">
-                                </asp:SqlDataSource>
+                                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dk-academyConnectionString %>" SelectCommand="SELECT [std_name], [std_email], [std_course], [std_id], [branch_id], [course_apply_time], [course_duration] FROM [student_status]"></asp:SqlDataSource>
                             </td>
                         </tr>
                     </table>
@@ -304,4 +270,37 @@
             </asp:View>
             <br />
         </asp:MultiView>
+        <script>
+            using System;
+            using System.Data;
+            using System.Configuration;
+            using System.Collections;
+            using System.Collections.Specialized;
+            using System.Web;
+            using System.Web.Security;
+            using System.Web.UI;
+            using System.Web.UI.WebControls;
+            using System.Web.UI.WebControls.WebParts;
+            using System.Web.UI.HtmlControls;
+            
+            
+            public partial class Default3 : System.Web.UI.Page
+
+
+            {
+                protected void Page_Load(object sender, EventArgs e)
+                {
+
+
+                }
+                protected void ddTest_SelectedIndexChanged(object sender, EventArgs e)
+                {
+
+                    MultiView1.ActiveViewIndex = Convert.ToInt16(ddTest.SelectedIndex);
+                }
+
+
+            }
+
+        </script>
     </asp:Content>
