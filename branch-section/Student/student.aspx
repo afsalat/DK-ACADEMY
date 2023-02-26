@@ -1,8 +1,8 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/branch-section/Branch_Page/branch-page.master" %>
 
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
-    <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         <style type="text/css">
             .style6 {
                 border-radius: 15px;
@@ -12,6 +12,14 @@
                 margin-left: 3%;
             }
 
+            .style26 {
+                border-radius: 15px;
+                box-shadow: 6px 6px 15px black;
+                height: 60vh;
+                width: 95%;
+                margin-left: 3%;
+                display:none;
+            }
             .style7 {
                 width: 100%;
                 height: 361px;
@@ -37,11 +45,13 @@
                 overflow-y: scroll;
                 overflow: hidden;
             }
+
             .headerr {
                 display: block;
                 width: 100%;
                 height: 30px;
             }
+
             .form1
             {
             	height:100%;
@@ -50,15 +60,18 @@
             	justify-content:center;
             	display:flex;
             }
+
             .style12
             {
                 width: 100%;
                 height: 164px;
             }
+
             .style13
             {
                 width: 50%;
             }
+
             .style14
             {
                 width: 452px;
@@ -85,9 +98,7 @@
         </style>
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <asp:MultiView ID="MultiView1" runat="server">
-            <asp:View ID="View1" runat="server">
-                <div class="style6">
+                <div class="style6" id="div1">
                     <table class="style7">
                         <tr>
                             <td class="style16">
@@ -133,7 +144,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="right" class="style9">
-                                                        <asp:LinkButton ID="LinkButton1" runat="server">New Addmissin</asp:LinkButton>
+                                                        <asp:Button ID="LinkButton1" runat="server" Text="New Admission" Font-Bold="True" OnClientClick="toform()" Font-Names="Arial" ForeColor="#339966" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </td>
                                                 </tr>
@@ -176,9 +187,7 @@
                         </tr>
                     </table>
                 </div>
-            </asp:View>
-            <asp:View ID="View2" runat="server">
-                <div class="style6" align="center">
+                <div class="style26" align="center" id="div2">
                 <form class="form1">
                     <br />
                     <br />
@@ -259,48 +268,27 @@
                         <tr>
                             <td colspan="2" align="center">
                                                 <br />
-                    <asp:Button ID="Button2" runat="server" Text="Submit" Font-Bold="True" Font-Names="Arial" 
-                                                    ForeColor="#339966" />
+                                <asp:Button ID="Button2" runat="server" Width="80px" Height="30px" Text="Submit" Font-Bold="True" Font-Names="Arial" ForeColor="#339966" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                                 &nbsp;</td>
                         </tr>
                     </table>
 
                 </form>
                 </div>
-            </asp:View>
-            <br />
-        </asp:MultiView>
-        <script>
-            using System;
-            using System.Data;
-            using System.Configuration;
-            using System.Collections;
-            using System.Collections.Specialized;
-            using System.Web;
-            using System.Web.Security;
-            using System.Web.UI;
-            using System.Web.UI.WebControls;
-            using System.Web.UI.WebControls.WebParts;
-            using System.Web.UI.HtmlControls;
-            
-            
-            public partial class Default3 : System.Web.UI.Page
+        <script type="text/javascript">
 
-
+            function toform()
             {
-                protected void Page_Load(object sender, EventArgs e)
-                {
-
-
-                }
-                protected void ddTest_SelectedIndexChanged(object sender, EventArgs e)
-                {
-
-                    MultiView1.ActiveViewIndex = Convert.ToInt16(ddTest.SelectedIndex);
-                }
-
+                document.getElementById('div2').style.display = 'block';
+                document.getElementById('div1').style.display = 'none';
 
             }
+            function tohome()
+            {
+                document.getElementById('div2').style.display = 'none';
+                document.getElementById('div1').style.display = 'block';
 
+            }
         </script>
     </asp:Content>
