@@ -23,9 +23,22 @@ course list ,branch location and other features.
 started. " will be coming soon "
 
   ## Installation
-To run this project, you don't need to install anything. Just open the :-
+To run this project, you need to install visual studio. Just open :-
 
-🏴 Home/Main_section :  DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
+🏴 Home/Main_section 
+----------------------
+DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
+
+🏴 Admin_section
+---------------------
+DK-academy ➡️ Admin_section ➡️ Std_Details ➡️ just open the std_details.aspx file in your web browser
+
+
+🏴 Branch_section
+--------------------
+Dk-academy ➡️ branch-section ➡️ Dash_Board ➡️ just open the dashboard.aspx file in your web browser
+
+
 
 ## Contributing
 Contributions are welcome. If you find any issues or have any suggestions for improvement, please create an issue or pull request on the GitHub repository.
