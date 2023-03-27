@@ -25,10 +25,10 @@ started. " will be coming soon "
   ## Installation
 To run this project, you need to install visual studio. Just open :-
 
-###Home/Main_section 
-----------------------
+🏴 Home/Main_section 
+{
 DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
-
+}
 🏴 Admin_section
 ---------------------
 DK-academy ➡️ Admin_section ➡️ Std_Details ➡️ just open the std_details.aspx file in your web browser
