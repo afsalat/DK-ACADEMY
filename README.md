@@ -23,7 +23,10 @@ course list ,branch location and other features.
 started. " will be coming soon "
 
   ## Installation
-To run this project, you don't need to install anything. Just open the :[gfyg]
+To run this project, you don't need to install anything. Just open the :-
+
+🏴 Home/Main_section :  DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
+
 ## Contributing
 Contributions are welcome. If you find any issues or have any suggestions for improvement, please create an issue or pull request on the GitHub repository.
     
