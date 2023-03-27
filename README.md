@@ -29,12 +29,12 @@ To run this project, you need to install visual studio. Just open :-
 <br>
 DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
 
-🏴 Admin_section
+<b> 🏴 Admin_section </b>
 <br>
 DK-academy ➡️ Admin_section ➡️ Std_Details ➡️ just open the std_details.aspx file in your web browser
 
 
-🏴 Branch_section
+<b> 🏴 Branch_section </b>
 <br>
 Dk-academy ➡️ branch-section ➡️ Dash_Board ➡️ just open the dashboard.aspx file in your web browser
 
