@@ -23,7 +23,7 @@ course list ,branch location and other features.
 started. " will be coming soon "
 
   ## Installation
-To run this project, you don't need to install anything. Just open the index.html file in your web browser.
+To run this project, you don't need to install anything. Just open the :[gfyg]
 ## Contributing
 Contributions are welcome. If you find any issues or have any suggestions for improvement, please create an issue or pull request on the GitHub repository.
     
