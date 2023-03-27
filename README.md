@@ -22,7 +22,7 @@ course list ,branch location and other features.
 > Client side section : it's for students activities and actually this section not
 started. " will be coming soon "
 
-  <center> ## Installation </center>
+<center> ## Installation </center>
 To run this project, you need to install visual studio. Just open :-
 
 <b>🏴 Home/Main_section </b>
