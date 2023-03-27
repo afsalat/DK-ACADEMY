@@ -22,7 +22,7 @@ course list ,branch location and other features.
 > Client side section : it's for students activities and actually this section not
 started. " will be coming soon "
 
-<center> ## Installation </center>
+## Installation
 To run this project, you need to install visual studio. Just open :-
 
 <b>🏴 Home/Main_section </b>
@@ -30,12 +30,12 @@ To run this project, you need to install visual studio. Just open :-
 DK-academy ➡️ Home_section ➡️ Home_Page ➡️ just open the home.html file in your web browser
 
 🏴 Admin_section
----------------------
+<br>
 DK-academy ➡️ Admin_section ➡️ Std_Details ➡️ just open the std_details.aspx file in your web browser
 
 
 🏴 Branch_section
---------------------
+<br>
 Dk-academy ➡️ branch-section ➡️ Dash_Board ➡️ just open the dashboard.aspx file in your web browser
 
 
